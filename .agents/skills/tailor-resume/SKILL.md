@@ -28,6 +28,7 @@ Execute all steps without pausing for user approval.
 Read these files completely:
 
 - `master/resume.yaml` — canonical source (do NOT edit)
+- `docs/projects-catalog.yaml` — GitHub-sourced project metadata for picking the best 2 projects
 - `docs/tailoring-playbook.md` — tailoring rules
 - `docs/jd-analysis-template.md` — audit report structure
 
@@ -59,7 +60,7 @@ Create: `output/{slug}/`
 |---------|--------|
 | `summary` | Aggressively rewrite for JD focus |
 | `experience[].bullets` | Select, reorder, aggressively rewrite; respect bullet caps |
-| `projects` | Set `include: true/false`; select/reorder/rewrite bullets |
+| `projects` | **GameVault always #1** (`include: true`); pick 1 more by JD match; set `include: false` on others; rewrite bullets |
 | `skills` | Reorder categories and keywords |
 | `education` | **Do not change** |
 | `certifications` | **Do not change** |
@@ -77,7 +78,7 @@ Write `output/{slug}/jd-analysis.md` using the template structure:
 
 - Keyword coverage (matched, missing, percentage)
 - Tailoring decisions with rationale
-- Page length status (soft 1-page — warn if overflow, do not auto-trim)
+- Page length status (soft 1-page — warn if overflow, do not auto-trim; drop Fractal.ai before going below 2 projects)
 - Gap analysis with interview talking points
 - ATS tips for this role
 

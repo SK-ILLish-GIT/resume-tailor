@@ -1,0 +1,397 @@
+# Project catalog for /tailor-resume project selection.
+# Fetched from GitHub READMEs/docs where public; updated manually when repos are private.
+# Match projects to JD keywords using role_focus, jd_keywords, and best_for_jd_types.
+# Always include exactly 2 projects — pick highest-scoring pair from this catalog.
+
+meta:
+  last_updated: "2026-08-25"
+  selection_rule: >
+    GameVault is ALWAYS project #1 (include: true, listed first among projects).
+    Pick the 2nd project by JD keyword overlap from OtelForge, File Organizer, PriceTracker.
+    Always exactly 2 projects included.
+
+projects:
+  - id: gamevault
+    name: GameVault (Distributed Gaming Platform)
+    github_url: https://github.com/SK-ILLish-GIT/games_sk
+    github_access: public
+    dates: 01/2026 -- 04/2026
+
+    summary: >
+      Production-grade microservices gaming platform — 10-service Docker Compose stack plus
+      optional 8-container observability overlay. Nginx API gateway, 5 Express.js backend
+      services, JWT auth, Redis leaderboards, PostgreSQL + MongoDB + Redis data layer,
+      full MELT observability (OpenTelemetry, Prometheus, Grafana, Loki, Tempo).
+
+    stack:
+      - TypeScript
+      - React 18
+      - Vite
+      - Node.js
+      - Express.js
+      - Nginx
+      - Docker Compose
+      - PostgreSQL 16
+      - MongoDB 7
+      - Redis 7
+      - OpenTelemetry
+      - Prometheus
+      - Grafana
+      - Loki
+      - Tempo
+      - Prisma
+      - JWT
+
+    services_count: 10
+    observability_containers: 8
+    grafana_dashboards: 6
+
+    highlights:
+      - Microservices architecture with independent Docker containers per game/service
+      - Nginx API gateway routing to auth, leaderboard, and 5 game backend services
+      - JWT auth with rotated refresh tokens; Redis sorted-set leaderboards
+      - Three data stores — PostgreSQL (users/auth), MongoDB (game state), Redis (cache/sessions)
+      - Full observability stack — OTel SDK in every service, 6 Grafana dashboards, trace-log correlation
+      - Flappy Bird with HMAC-signed run validation; six game modes
+
+    role_focus:
+      - backend
+      - platform
+      - infra
+      - observability
+      - distributed-systems
+      - microservices
+      - cloud-native
+      - fullstack
+
+    jd_keywords:
+      - docker
+      - containers
+      - microservices
+      - microservice architecture
+      - distributed systems
+      - api gateway
+      - nginx
+      - express
+      - node.js
+      - postgresql
+      - mongodb
+      - redis
+      - sql
+      - nosql
+      - opentelemetry
+      - observability
+      - prometheus
+      - grafana
+      - loki
+      - tempo
+      - melt
+      - ci/cd
+      - rest apis
+      - jwt
+      - typescript
+      - react
+      - scalable
+      - production
+
+    best_for_jd_types:
+      - platform
+      - infra
+      - sre
+      - backend
+      - cloud-native
+      - observability
+      - distributed-systems
+      - fullstack
+
+    weak_for_jd_types:
+      - pure frontend
+      - mobile
+      - data-science
+      - ml-research
+
+  - id: otelforge
+    name: OtelForge
+    github_url: https://github.com/SK-ILLish-GIT/OtelForge
+    github_access: public
+    github_fetched: "2026-08-25"
+    dates: 02/2025 -- Present
+
+    summary: >
+      Cloud-agnostic internal platform to deploy and operate OpenTelemetry Collector
+      configurations across SSH-reachable Linux nodes (AWS EC2, GCP, Azure, on-prem).
+      Operators register instances, launch batch events against one or many targets, and
+      watch live job output in a React UI. Go (Fiber) REST API, async Go workers via
+      RabbitMQ, PostgreSQL persistence, Docker Compose deployment. SSH + SCP execution
+      with predefined audited scripts, pre/post verification, rollback, and per-event audit trail.
+
+    stack:
+      - OpenTelemetry
+      - Go
+      - Golang
+      - Fiber
+      - React
+      - TypeScript
+      - Vite
+      - PostgreSQL 16
+      - RabbitMQ 3
+      - Docker Compose
+      - SSH
+      - SCP
+      - JWT
+      - bcrypt
+      - AES-256-GCM
+
+    services:
+      - Go REST API (Fiber) — /api/v1
+      - Go worker pool — RabbitMQ consumer + SSH runner
+      - React + Vite web UI — live event polling, job logs
+      - PostgreSQL 16 — users, instances, events, jobs
+      - RabbitMQ 3 — async job queue with DLQ
+
+    highlights:
+      - Batch deploy OTel Collector configs to N nodes via one event (SSH + SCP, no agent required)
+      - Async job processing — API enqueues one RabbitMQ message per node; workers execute remotely
+      - Live job output in UI with 1.5s polling; per-node pass/fail, stdout/stderr, rollback
+      - Pre-run YAML validation and post-run verification checks on every deploy
+      - Security — JWT auth, AES-256-GCM encrypted SSH credentials, SSH host-key TOFU pinning
+      - Audit trail — launcher name/email on every event; admin views across all activity
+      - Predefined platform-owned bash scripts only (no arbitrary user shell)
+      - Cloud-agnostic — works on any SSH-reachable Linux node, not AWS IAM/SSM dependent
+      - Docker Compose stack — postgres, rabbitmq, api, worker, web
+      - Retries with DLQ after 3 failed attempts; rerun-failed and per-node rollback APIs
+      - Related to production OtelForge work at Zscaler (20+ AWS EC2 instances)
+
+    predefined_tasks:
+      - Deploy collector config
+      - Validate config (otelcol validate)
+      - Restart collector service
+      - Rollback to backup
+      - Fetch collector logs
+      - Install OTel Agent
+
+    role_focus:
+      - platform
+      - infra
+      - observability
+      - sre
+      - cloud
+      - cloud-native
+      - distributed-systems
+      - backend
+      - security
+      - devops
+
+    jd_keywords:
+      - opentelemetry
+      - observability
+      - telemetry
+      - collector
+      - go
+      - golang
+      - fiber
+      - react
+      - typescript
+      - docker
+      - docker compose
+      - postgresql
+      - rabbitmq
+      - message queue
+      - async
+      - workers
+      - ssh
+      - scp
+      - aws
+      - ec2
+      - cloud
+      - cloud-agnostic
+      - azure
+      - gcp
+      - distributed systems
+      - microservices
+      - rest api
+      - jwt
+      - encryption
+      - audit
+      - rollback
+      - verification
+      - ci/cd
+      - production
+      - scalable
+      - batch
+      - orchestration
+      - platform
+      - sre
+      - monitoring
+      - security
+
+    best_for_jd_types:
+      - platform
+      - infra
+      - sre
+      - observability
+      - cloud-native
+      - cloud-data-protection
+      - backend
+      - security
+      - devops
+
+    weak_for_jd_types:
+      - pure frontend
+      - mobile
+      - fintech-payments
+      - crm
+      - ml-research
+
+    interview_one_liner: >
+      Purpose-built OpenTelemetry deployment platform for batch config rollout across
+      SSH nodes — not an AWS SSM replacement, but OTel-specific with verification,
+      rollback, and audit built in.
+
+    source_docs:
+      - README.md
+      - ARCHITECTURE.md
+      - docker-compose.yml
+
+  - id: file-organizer
+    name: File Organizer
+    github_url: https://github.com/SK-ILLish-GIT/file-organizer
+    github_access: public
+    dates: 09/2024 -- 10/2024
+
+    summary: >
+      CLI file organization toolkit — Bash script classifies files by extension into images,
+      videos, docs, archives, and music. Smart subfolders for screenshots/PDFs, duplicate-name
+      skipping. Python wrapper installs script, prompts for categories, prints move summary
+      with throughput stats.
+
+    stack:
+      - Bash
+      - Python 3
+      - Shell Scripting
+
+    highlights:
+      - Extension-based file sorting into 5 category folders
+      - Smart subfolders — Screenshots → Images/Screenshots, PDFs → Docs/PDFs
+      - Duplicate handling — skips if target filename already exists
+      - Python CLI wrapper with category prompts and summary report (files moved, time, throughput)
+      - Customizable categories via flags (--images, --videos, --docs, --archives, --music)
+
+    role_focus:
+      - automation
+      - scripting
+      - cli
+      - devops-adjacent
+      - backend-adjacent
+
+    jd_keywords:
+      - bash
+      - shell scripting
+      - python
+      - automation
+      - cli
+      - scripting
+      - linux
+      - devops
+      - file system
+      - utilities
+
+    best_for_jd_types:
+      - automation
+      - devops
+      - scripting
+      - sde-general
+      - backend-junior
+
+    weak_for_jd_types:
+      - platform
+      - cloud-native
+      - observability
+      - distributed-systems
+      - frontend
+      - fintech
+      - data-engineering
+
+  - id: pricetracker
+    name: PriceTracker
+    github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
+    github_access: public
+    dates: 11/2024 -- 01/2025
+    website_url: https://price-tracker-ebon.vercel.app/
+
+    summary: >
+      Next.js 14 price tracking web app — scrapes Amazon product prices via Bright Data proxy,
+      stores history in MongoDB (Mongoose), cron-based daily refresh (7am), email alerts on
+      price drops/stock/discount thresholds. AI-generated product descriptions via Google Gemini.
+
+    stack:
+      - Next.js 14
+      - TypeScript
+      - React 18
+      - Tailwind CSS
+      - MongoDB
+      - Mongoose
+      - Axios
+      - Cheerio
+      - Google Gemini
+      - Nodemailer
+      - Vercel
+      - Cron Jobs
+
+    highlights:
+      - Amazon price scraping with Cheerio + proxy
+      - MongoDB price history with current/avg/high/low stats
+      - Cron API route for scheduled daily price refresh and email alerts
+      - Email subscriptions via Nodemailer (Gmail SMTP)
+      - AI product descriptions under 200 words (Gemini)
+      - Deployed on Vercel with Speed Insights; GitHub CodeQL workflow
+
+    role_focus:
+      - fullstack
+      - frontend
+      - backend
+      - product
+      - automation
+
+    jd_keywords:
+      - next.js
+      - react
+      - typescript
+      - node.js
+      - mongodb
+      - nosql
+      - cron
+      - scraping
+      - automation
+      - email
+      - ai
+      - gemini
+      - vercel
+      - rest apis
+      - product development
+      - fullstack
+
+    best_for_jd_types:
+      - fullstack
+      - frontend
+      - backend-junior
+      - product
+      - web
+
+    weak_for_jd_types:
+      - platform
+      - infra
+      - observability
+      - cloud-native
+      - distributed-systems
+      - sre
+      - security
+
+# Quick pairing guide — GameVault is always #1; second slot varies by JD
+pairing_hints:
+  default_second: otelforge
+  rubrik-cloud-native: otelforge
+  popclub-backend-sde1: otelforge
+  frontend-fullstack: pricetracker
+  automation-scripting: file-organizer
+  fintech-product: pricetracker

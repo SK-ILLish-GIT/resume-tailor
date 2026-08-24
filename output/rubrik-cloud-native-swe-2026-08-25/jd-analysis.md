@@ -52,21 +52,19 @@ Rewrote to lead with **cloud-native distributed systems**, **Python**, **Golang*
 - **Kept/rewrote:** OpenTelemetry + PII masking → secure data handling (adjacent to cloud data protection)
 - **Kept/rewrote:** pytest + GitLab CI/CD → design, test, deploy, maintain software releases
 
-**Fractal.ai (2 bullets kept, rewritten):**
-- Reframed testing toward SDLC and software quality
-- Reframed project work toward backend development and time-sensitive collaboration
+**Fractal.ai:** Dropped entirely to make room for GameVault + OtelForge (2-project minimum policy; Fractal is first cut for space)
 
 ### Projects
-- **Included:** GameVault — Docker, microservices, observability stack (strongest cloud-native match)
-- **Excluded:** PriceTracker (`include: false`) — cron/scraping focus, weak cloud-native match
-- All 4 GameVault bullets kept — docker compose, microservices, OpenTelemetry/Prometheus/Grafana, multi-database architecture
+- **#1 (always):** GameVault — 3 bullets (Docker microservices, Nginx/API gateway + data stores, MELT observability)
+- **#2 (JD match):** OtelForge — 3 bullets (OTel pipelines, RabbitMQ/Go orchestration, TLS/multi-signal telemetry)
+- **Excluded:** File Organizer, PriceTracker (`include: false`)
+- **Space:** Dropped Fractal.ai experience entirely; trimmed Zscaler to 3 bullets and GameVault from 4→3
 
 ### Skills
-- Reordered: **Languages** first with Golang, Python, C++ leading (JD language priority)
-- Renamed DevOps category → **DevOps & Observability** with OpenTelemetry/Prometheus leading
-- **Cloud & Databases** second with AWS leading
-- Moved React/GraphQL to lower-priority Backend category
-- Did not add Kubernetes, Java, Scala, or Azure/GCP — not in master
+- Reordered: **Languages** (Golang, Python, C++ lead)
+- **DevOps & Observability** — Docker, OTel, Prometheus, Grafana, Loki, Tempo, RabbitMQ (aligned to GameVault + OtelForge)
+- **Backend & Microservices** — Node.js, Express, Nginx, microservices (GameVault stack)
+- **Cloud & Databases** — AWS, PostgreSQL, MongoDB, Redis
 
 ## Page Length
 

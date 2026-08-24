@@ -12,10 +12,10 @@ header:
     label: sksahil-portfolio.onrender.com
 
 summary: >
-  Software Engineer with experience building cloud-native distributed systems, observability
-  platforms, and scalable microservices using Python, Golang, AWS, Docker, and OpenTelemetry.
-  Skilled in designing, deploying, and maintaining production software with CI/CD automation,
-  telemetry pipelines, and strong SDLC engineering practices.
+  Software Engineer with experience building cloud-native distributed systems and observability
+  platforms using Golang, Python, Docker, AWS, and OpenTelemetry across microservices and
+  telemetry pipelines. Skilled in designing, deploying, and maintaining production software
+  with CI/CD automation and full MELT observability stacks.
 
 education:
   - institution: Indian Institute of Information Technology, Allahabad
@@ -45,8 +45,8 @@ experience:
         priority: 2
       - text: >-
           Built an interactive feature flag network tool with graph-based visualization and
-          AI-powered chat support, enabling developers to discover, visualize, and toggle flag
-          dependencies across distributed platforms.
+          AI-powered chat support, enabling developers to discover and toggle flag dependencies
+          across distributed platforms.
         tags: [platform, distributed-systems, ai, feature-flags]
         priority: 3
 
@@ -74,32 +74,6 @@ experience:
           production environments.
         tags: [opentelemetry, security, observability, python]
         priority: 3
-      - text: >-
-          Architected a complete pytest automation framework integrated with GitLab CI/CD,
-          covering 50+ test cases to design, test, deploy, and maintain reliable software
-          releases.
-        tags: [pytest, ci-cd, testing, sdlc, python]
-        priority: 4
-
-  - company: Fractal.ai
-    title: Software Development Engineer Intern
-    dates: 05/2024 -- 07/2024
-    location: Remote
-    tech_stack: Node.js, MySQL, JavaScript
-    certificate_url: https://drive.google.com/file/d/1ZvOXi7rF7RsdwN81TFdBPw-0deks7ZIX/view
-    bullets:
-      - text: >-
-          Architected automated test scripts using Codecept.js and Mocha.js integrated into the
-          development workflow, improving software quality and maintainability across 2 production
-          projects.
-        tags: [testing, automation, sdlc]
-        priority: 1
-      - text: >-
-          Contributed to 2 projects utilizing Node.js and MySQL, developing and improving
-          backend software components in collaboration with cross-functional teams on
-          time-sensitive deliverables.
-        tags: [nodejs, mysql, backend, collaboration]
-        priority: 2
 
 projects:
   - name: GameVault (Distributed Gaming Platform)
@@ -107,33 +81,67 @@ projects:
     github_label: github.com/SK-ILLish-GIT/games_sk
     website_url: null
     dates: 01/2026 -- 04/2026
-    tech_stack: Docker, Express.js, PostgreSQL, MongoDB, Redis, OpenTelemetry
+    tech_stack: Docker, Express.js, PostgreSQL, MongoDB, Redis, OpenTelemetry, Prometheus, Grafana
     include: true
     bullets:
       - text: >-
           Built a containerized cloud-native platform with a 10-service Docker Compose core stack
-          and 8-container observability overlay for scalable, distributed microservice
-          architecture.
+          and 8-container observability overlay for scalable distributed microservices.
         tags: [docker, microservices, distributed-systems, cloud]
         priority: 1
       - text: >-
-          Designed 5 independent Express.js backend microservices behind an Nginx API gateway,
-          routing requests for auth, leaderboards, and game modules with scalable service
-          decomposition.
-        tags: [microservices, distributed-systems, api-gateway]
+          Designed 5 Express.js backend microservices behind an Nginx API gateway with JWT auth,
+          Redis leaderboards, and PostgreSQL + MongoDB + Redis data stores.
+        tags: [microservices, nginx, express, postgresql, mongodb, redis]
         priority: 2
       - text: >-
-          Instrumented all backend services with OpenTelemetry, Prometheus, Loki, and 6 Grafana
-          dashboards for monitoring, analysis, and operational visibility across the distributed
-          system.
-        tags: [opentelemetry, observability, prometheus, grafana]
+          Instrumented all backend services with OpenTelemetry, Prometheus, Loki, Tempo, and 6
+          Grafana dashboards with trace-to-log correlation across the distributed system.
+        tags: [opentelemetry, prometheus, grafana, observability]
         priority: 3
+
+  - name: OtelForge
+    github_url: https://github.com/SK-ILLish-GIT/OtelForge
+    github_label: github.com/SK-ILLish-GIT/OtelForge
+    website_url: null
+    dates: 02/2025 -- Present
+    tech_stack: OpenTelemetry, Go, Fiber, React, PostgreSQL, RabbitMQ, Docker Compose, SSH
+    include: true
+    bullets:
       - text: >-
-          Integrated PostgreSQL, Redis, and MongoDB across microservices for users/auth,
-          caching, and session state, demonstrating scalable data management in a containerized
-          environment.
-        tags: [postgresql, redis, mongodb, databases]
-        priority: 4
+          Built OtelForge, a cloud-agnostic platform to deploy and manage OpenTelemetry Collector
+          configurations across SSH-reachable Linux nodes with batch events and live job output.
+        tags: [opentelemetry, observability, platform, golang, cloud]
+        priority: 1
+      - text: >-
+          Architected Go (Fiber) REST API and RabbitMQ async workers — one message per node,
+          SSH/SCP execution with pre/post verification, DLQ retries, and per-node rollback.
+        tags: [golang, rabbitmq, distributed-systems, ssh, automation]
+        priority: 2
+      - text: >-
+          Implemented JWT auth, AES-256-GCM encrypted SSH credentials, host-key TOFU pinning,
+          and per-event audit trails for secure multi-node OTel config rollout at scale.
+        tags: [security, observability, platform, golang]
+        priority: 3
+
+  - name: File Organizer
+    github_url: https://github.com/SK-ILLish-GIT/file-organizer
+    github_label: github.com/SK-ILLish-GIT/file-organizer
+    website_url: null
+    dates: 09/2024 -- 10/2024
+    tech_stack: Bash, Python, Shell Scripting
+    include: false
+    bullets:
+      - text: >-
+          Built a Bash script that sorts files into images, videos, docs, archives, and music
+          folders by extension.
+        tags: [bash, automation, shell-scripting, python]
+        priority: 1
+      - text: >-
+          Wrapped the CLI in a Python helper that installs the script, prompts for categories, and
+          prints a move summary.
+        tags: [python, bash, cli, automation]
+        priority: 2
 
   - name: PriceTracker
     github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
@@ -151,23 +159,18 @@ projects:
           users with morning alert.
         tags: [cron, scraping, nodejs, automation]
         priority: 2
-      - text: >-
-          Implemented AI-generated product descriptions, keeping each under 200 words, enhancing
-          clarity and consistency.
-        tags: [ai, nextjs, content-generation]
-        priority: 3
 
 skills:
   - category: Languages
-    keywords: Golang, Python, C++, JavaScript, TypeScript, Bash
+    keywords: Golang, Python, C++, TypeScript, JavaScript, Bash
   - category: Cloud & Databases
-    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, MySQL, Redis
+    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, Redis, SQL, NoSQL
   - category: DevOps & Observability
-    keywords: Docker, CI/CD, OpenTelemetry, Prometheus, Grafana, Loki, RabbitMQ
-  - category: Backend
-    keywords: Node.js, Express.js, REST APIs, GraphQL
+    keywords: Docker, OpenTelemetry, Prometheus, Grafana, Loki, Tempo, RabbitMQ, CI/CD
+  - category: Backend & Microservices
+    keywords: Node.js, Express.js, Nginx, REST APIs, Microservices, Distributed Systems
   - category: Concepts
-    keywords: Data Structures, OOP, Distributed Systems, Operating Systems, DBMS, MCP
+    keywords: Data Structures, OOP, Operating Systems, DBMS, MCP
 
 certifications:
   - latex: >-

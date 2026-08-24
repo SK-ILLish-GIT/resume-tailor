@@ -83,11 +83,15 @@ Score each bullet by tag overlap with JD keywords. Select by score × (1/priorit
 
 ## Project Selection
 
-- Include 1–2 most relevant projects (set `include: false` on others)
-- Score by tag overlap with JD
-- Platform/infra JD → prefer GameVault (observability, docker, microservices)
-- Frontend/fullstack JD → prefer PriceTracker or GameVault frontend bullets
-- Max 3–4 bullets per included project
+- **GameVault is always project #1** — `include: true`, listed first in `projects[]`
+- **Pick exactly 1 more project** as #2 by scoring OtelForge, File Organizer, PriceTracker against the JD (use `docs/projects-catalog.yaml`)
+- Set `include: false` on the other two projects
+- Cross-reference catalog `highlights` when rewriting bullets (do not fabricate)
+- Platform/infra/observability/cloud-native JD → **GameVault + OtelForge**
+- Frontend/fullstack JD → **GameVault + PriceTracker**
+- Automation/scripting JD → **GameVault + File Organizer**
+- Backend/product JD → **GameVault + OtelForge** (or PriceTracker if product/web focus)
+- Max 3–4 bullets per included project; trim lowest-scoring project bullets first
 
 ## Page Length Policy (Soft 1-Page)
 
@@ -95,6 +99,7 @@ Score each bullet by tag overlap with JD keywords. Select by score × (1/priorit
 - If likely overflow, set status to `OVERFLOW` in jd-analysis.md
 - List ranked cut suggestions (lowest JD-match bullets/projects first)
 - User decides cuts in follow-up chat
+- **Space priority when trimming:** never go below 2 projects — drop **Fractal.ai experience first** (entire role), then trim bullets within included projects, then other experience bullets
 
 ## Gap Policy
 

@@ -130,6 +130,61 @@ projects:
         tags: [opentelemetry, prometheus, grafana, observability]
         priority: 4
 
+  - name: OtelForge
+    github_url: https://github.com/SK-ILLish-GIT/OtelForge
+    github_label: github.com/SK-ILLish-GIT/OtelForge
+    website_url: null
+    dates: 02/2025 -- Present
+    tech_stack: OpenTelemetry, Go, Fiber, React, PostgreSQL, RabbitMQ, Docker Compose, SSH
+    include: true
+    bullets:
+      - text: >-
+          Built OtelForge, a cloud-agnostic platform to deploy and manage OpenTelemetry Collector
+          configurations across SSH-reachable Linux nodes with batch events and live job output
+          in a React UI.
+        tags: [opentelemetry, observability, platform, golang, react, cloud]
+        priority: 1
+      - text: >-
+          Architected Go (Fiber) REST API and RabbitMQ async workers — one message per node,
+          SSH/SCP remote execution with predefined scripts, pre/post verification, and DLQ
+          retries after 3 failed attempts.
+        tags: [golang, rabbitmq, distributed-systems, ssh, automation]
+        priority: 2
+      - text: >-
+          Implemented JWT auth, AES-256-GCM encrypted SSH credentials, host-key TOFU pinning,
+          and per-event audit trails for secure multi-node OTel config rollout.
+        tags: [security, observability, platform, golang]
+        priority: 3
+      - text: >-
+          Docker Compose deployment with PostgreSQL, RabbitMQ, API, worker, and web services —
+          supports rollback, rerun-failed jobs, and admin audit across all operator activity.
+        tags: [docker, postgresql, rabbitmq, platform, observability]
+        priority: 4
+
+  - name: File Organizer
+    github_url: https://github.com/SK-ILLish-GIT/file-organizer
+    github_label: github.com/SK-ILLish-GIT/file-organizer
+    website_url: null
+    dates: 09/2024 -- 10/2024
+    tech_stack: Bash, Python, Shell Scripting
+    include: true
+    bullets:
+      - text: >-
+          Built a Bash script that sorts files into images, videos, docs, archives, and music
+          folders by extension.
+        tags: [bash, automation, shell-scripting, python]
+        priority: 1
+      - text: >-
+          Added smart subfolders for screenshots and PDFs, with duplicate-name skipping to avoid
+          overwrites.
+        tags: [bash, automation, shell-scripting]
+        priority: 2
+      - text: >-
+          Wrapped the CLI in a Python helper that installs the script, prompts for categories, and
+          prints a move summary.
+        tags: [python, bash, cli, automation]
+        priority: 3
+
   - name: PriceTracker
     github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
     github_label: github.com/SK-ILLish-GIT/PriceTrackEr
