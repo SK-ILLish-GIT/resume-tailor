@@ -1,0 +1,17 @@
+\newcommand{\name}{ {{ header.name | latex_escape }} }
+\newcommand{\wpnumber}{ {{ header.phone | latex_escape }} }
+\newcommand{\emaila}{ {{ header.email | latex_escape }} }
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+\input{sections/header}
+\input{sections/summary}
+\input{sections/education}
+\input{sections/experience}
+\input{sections/projects}
+\input{sections/skills}
+\input{sections/coding}
+\input{sections/certifications}
+
+\end{document}

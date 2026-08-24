@@ -1,0 +1,6 @@
+\section{\normalsize \textbf{TECHNICAL SKILLS}}
+\begin{tabular}{@{}p{4.6cm} p{13.5cm}}
+{% for group in skills %}
+    \textbf{ {{- group.category | latex_escape -}} :} & {{- group.keywords | latex_escape -}} \\
+{% endfor %}
+\end{tabular}

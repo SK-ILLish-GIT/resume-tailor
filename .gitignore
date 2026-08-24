@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Resume build artifacts
+output/*/build/
+output/*/Sk_Sahil_Parvez_CV.pdf
+output/master/build/
+output/master/Sk_Sahil_Parvez_CV.pdf
+
+# LaTeX intermediates (inside build dirs, belt-and-suspenders)
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# OS
+.DS_Store

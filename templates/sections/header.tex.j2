@@ -1,0 +1,16 @@
+\parbox{\dimexpr\linewidth-2cm\relax}{
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \\
+     & { Contact Number: (+91) \wpnumber}
+    \\
+     & \href{mailto:{{- header.email | latex_escape -}}}{Mail: {\emaila}}\vspace{-8pt}
+    \\
+    {% raw %}\textbf{{\Huge \name}}{% endraw %}
+    &
+    \href{ {{- header.linkedin.url | latex_escape -}} }{LinkedIn: {{- header.linkedin.label | latex_escape -}}}
+    \\
+    &
+    \href{ {{- header.portfolio.url | latex_escape -}} }{Portfolio: {{- header.portfolio.label | latex_escape -}}}
+    \\
+\end{tabular*}
+}

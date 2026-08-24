@@ -1,0 +1,5 @@
+services:
+  tex:
+    build: .
+    image: resume-tailor-tex
+    working_dir: /work

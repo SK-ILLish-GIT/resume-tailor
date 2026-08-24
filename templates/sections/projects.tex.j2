@@ -1,0 +1,48 @@
+{% raw %}
+\newcommand{\projectItemListStart}{\begin{itemize}}
+\newcommand{\projectItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\projectSubheading}[5]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textbar\hspace{0.2em} {\href{#2}{#3}} & \text{#4} \\
+      \textbf{Tech Stack: }\text{#5} \\
+    \end{tabular*}
+}
+\newcommand{\projectSubheadingLink}[6]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textbar\hspace{0.2em} {\href{#2}{#3}} \textbar\hspace{0.2em} {\href{#4}{Website}} & \text{#5} \\
+      \textbf{Tech Stack: }\text{#6} \\
+    \end{tabular*}
+}
+{% endraw %}
+
+\section{\normalsize \textbf{PROJECTS}}
+    \resumeSubHeadingListStart
+{% for project in projects if project.get('include', True) %}
+{% if project.website_url %}
+        \projectSubheadingLink
+          { {{- project.name | latex_escape -}} }
+          { {{- project.github_url | latex_escape -}} }
+          { {{- project.github_label | latex_escape -}} }
+          { {{- project.website_url | latex_escape -}} }
+          { {{- project.dates | latex_escape -}} }
+          { {{- project.tech_stack | latex_escape -}} }
+{% else %}
+        \projectSubheading
+          { {{- project.name | latex_escape -}} }
+          { {{- project.github_url | latex_escape -}} }
+          { {{- project.github_label | latex_escape -}} }
+          { {{- project.dates | latex_escape -}} }
+          { {{- project.tech_stack | latex_escape -}} }
+{% endif %}
+        \vspace{-5pt}
+        \projectItemListStart
+{% for bullet in project.bullets %}
+            \ProjectItem{ {{- bullet.text | latex_escape -}} }
+{% endfor %}
+        \projectItemListEnd
+        \vspace{5pt}
+{% endfor %}
+    \resumeSubHeadingListEnd

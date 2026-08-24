@@ -1,0 +1,8 @@
+\section{\normalsize \textbf{EDUCATION}}
+  \resumeSubHeadingListStart
+{% for entry in education %}
+    \resumeSubheading
+      { {{- entry.institution | latex_escape -}} }{ {% if entry.details %}\textbf{ {{- entry.details | latex_escape -}} }{% endif %} }
+      { {{- entry.degree | latex_escape -}} }{ {{- entry.dates | latex_escape -}} }
+{% endfor %}
+  \resumeSubHeadingListEnd

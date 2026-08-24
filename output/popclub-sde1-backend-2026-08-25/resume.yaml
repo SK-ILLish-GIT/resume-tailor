@@ -1,0 +1,171 @@
+# Tailored for Poptech Growth (Popclub) — SDE-1 Backend — 2026-08-25
+
+header:
+  name: SK SAHIL PARVEZ
+  phone: "9874435806"
+  email: sksahilparvez2000@gmail.com
+  linkedin:
+    url: https://www.linkedin.com/in/sk-sahil-parvez-iiita/
+    label: linkedin.com/in/sk-sahil-parvez-iiita
+  portfolio:
+    url: https://sksahil-portfolio.onrender.com/
+    label: sksahil-portfolio.onrender.com
+
+summary: >
+  Backend Software Engineer with 1+ years of experience building scalable production systems
+  using Python, Golang, Node.js, and Express.js with REST APIs, SQL/NoSQL databases, and AWS.
+  Strong fundamentals in Data Structures, OOP, and system design with proven delivery across
+  fintech-adjacent product features, microservices, and CI/CD-driven engineering workflows.
+
+education:
+  - institution: Indian Institute of Information Technology, Allahabad
+    degree: Bachelor of Technology in Information Technology
+    dates: 07/2021 -- 06/2025
+    details: "Marks: 8.53/10"
+
+experience:
+  - company: Highspot
+    title: Software Development Engineer
+    dates: 08/2025 -- Present
+    location: Hyderabad
+    tech_stack: Node.js, Express.js, GraphQL, SQL, MongoDB, REST APIs
+    certificate_url: null
+    bullets:
+      - text: >-
+          Delivered production backend features for role play scorecard by integrating GraphQL
+          services with SQL data sources and building 15 data views for scalable application
+          performance.
+        tags: [graphql, sql, backend, rest-apis]
+        priority: 1
+      - text: >-
+          Built CodePilot, a backend AI workflow orchestrator with 15+ reusable SDLC skills and
+          governance guardrails, improving consistency and adoption of engineering best practices
+          across 5 teams and 50+ engineers.
+        tags: [ai, orchestration, backend, sdlc]
+        priority: 2
+      - text: >-
+          Implemented maintainable backend data pipelines using GraphQL and SQL to power
+          application features, participating in code reviews and cross-functional delivery with
+          product and engineering teams.
+        tags: [graphql, sql, backend]
+        priority: 3
+      - text: >-
+          Shipped scalable application modules using Node.js and Express.js, writing clean and
+          efficient code aligned with product requirements in a fast-paced production environment.
+        tags: [nodejs, express, backend]
+        priority: 4
+
+  - company: Zscaler, Inc
+    title: Software Development Engineer Intern
+    dates: 02/2025 -- 08/2025
+    location: Bangalore
+    tech_stack: Python, Golang, RabbitMQ, OpenTelemetry, CI/CD, AWS, REST APIs
+    certificate_url: https://www.credly.com/badges/6d8db15a-4bec-4729-855e-6faf7650847c
+    bullets:
+      - text: >-
+          Built OtelForge, a production backend platform to deploy and manage OpenTelemetry
+          Collectors across 20+ AWS EC2 instances for real-world scalable system operations.
+        tags: [python, aws, backend, platform]
+        priority: 1
+      - text: >-
+          Implemented concurrent backend workers in Golang with RabbitMQ and SSH to execute
+          predefined scripts securely, improving application reliability and performance in
+          distributed production systems.
+        tags: [golang, rabbitmq, backend, distributed-systems]
+        priority: 2
+      - text: >-
+          Architected a pytest unit testing automation framework integrated with GitLab CI/CD,
+          covering 50+ test cases to improve code quality, bug fixes, and maintainable releases.
+        tags: [pytest, ci-cd, unit-testing, python]
+        priority: 3
+
+  - company: Fractal.ai
+    title: Software Development Engineer Intern
+    dates: 05/2024 -- 07/2024
+    location: Remote
+    tech_stack: Node.js, MySQL, JavaScript, REST APIs
+    certificate_url: https://drive.google.com/file/d/1ZvOXi7rF7RsdwN81TFdBPw-0deks7ZIX/view
+    bullets:
+      - text: >-
+          Contributed to 2 product development projects using Node.js, MySQL, and REST APIs,
+          implementing backend features and improving application performance in collaboration
+          with cross-functional teams.
+        tags: [nodejs, mysql, rest-apis, backend]
+        priority: 1
+      - text: >-
+          Developed automated test scripts using Codecept.js and Mocha.js, supporting unit
+          testing practices and bug fixes to ensure maintainable, production-ready code.
+        tags: [testing, automation, backend]
+        priority: 2
+
+projects:
+  - name: GameVault (Distributed Gaming Platform)
+    github_url: https://github.com/SK-ILLish-GIT/games_sk
+    github_label: github.com/SK-ILLish-GIT/games_sk
+    website_url: null
+    dates: 01/2026 -- 04/2026
+    tech_stack: TypeScript, Express.js, PostgreSQL, MongoDB, Redis, REST APIs
+    include: true
+    bullets:
+      - text: >-
+          Built 5 independent Express.js backend services with an Nginx API gateway routing
+          REST API requests for auth, leaderboards, and game modules in a scalable
+          microservices architecture.
+        tags: [express, rest-apis, backend, microservices]
+        priority: 1
+      - text: >-
+          Integrated SQL and NoSQL databases — PostgreSQL for users/auth and leaderboard, Redis
+          for caching, and MongoDB for session state — supporting efficient backend data access
+          patterns.
+        tags: [postgresql, mongodb, redis, sql, nosql]
+        priority: 2
+      - text: >-
+          Developed a containerized backend platform with a 10-service Docker Compose stack,
+          demonstrating scalable system design and production-style service orchestration.
+        tags: [docker, backend, distributed-systems]
+        priority: 3
+
+  - name: PriceTracker
+    github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
+    github_label: github.com/SK-ILLish-GIT/PriceTrackEr
+    website_url: https://price-tracker-ebon.vercel.app/
+    dates: 11/2024 -- 01/2025
+    tech_stack: Next.js, Tailwind CSS, Node.js, MongoDB, Cron Jobs
+    include: false
+    bullets:
+      - text: Developed a price tracking website with automated price drop alert functionality.
+        tags: [nextjs, nodejs, mongodb, automation]
+        priority: 1
+      - text: >-
+          Integrated cron jobs for scheduled (7am daily) data scraping from amazon, providing
+          users with morning alert.
+        tags: [cron, scraping, nodejs, automation]
+        priority: 2
+      - text: >-
+          Implemented AI-generated product descriptions, keeping each under 200 words, enhancing
+          clarity and consistency.
+        tags: [ai, nextjs, content-generation]
+        priority: 3
+
+skills:
+  - category: Languages
+    keywords: Python, Golang, JavaScript, TypeScript, C++, Bash
+  - category: Cloud & Databases
+    keywords: PostgreSQL, MongoDB, MySQL, Redis, SQL, NoSQL, AWS (EC2, S3)
+  - category: Backend & APIs
+    keywords: Node.js, Express.js, REST APIs, GraphQL, RabbitMQ
+  - category: DevOps & Testing
+    keywords: Docker, CI/CD, GitLab CI/CD, pytest, Unit Testing
+  - category: Concepts
+    keywords: Data Structures, OOP, DBMS, Operating Systems, Distributed Systems, System Design
+
+certifications:
+  - latex: >-
+      Achieved ratings of \textbf{1876} on \textbf{\href{https://www.codechef.com/users/pir0_coder}{CodeChef}}
+      (4 Star), \textbf{1501} on \textbf{\href{https://codeforces.com/profile/foolcoder}{Codeforces}}
+      (Specialist), and \textbf{1973} on \textbf{\href{https://leetcode.com/u/Fibonacci_lc/}{LeetCode}} (Knight).
+  - latex: Solved \textbf{1600+} DSA and competitive programming problems across platforms.
+  - latex: >-
+      Pursuing PG Certification Program in \textbf{Forward Deployed Engineering (FDE)} from \textbf{IIT Roorkee}.
+  - latex: >-
+      Mastered agile framework and risk analysis from \href{https://drive.google.com/file/d/1y-vA2-KL91K49sSYUVopEc4qqcYQziZ3/view?usp=sharing}{\textbf{Google's Foundations of Project Management}}.

@@ -1,0 +1,55 @@
+---
+description: Resume tailor project context — routes JD tailoring requests and enforces master/variant conventions.
+globs:
+  - master/**
+  - output/**
+  - docs/**
+  - scripts/**
+  - templates/**
+alwaysApply: true
+---
+
+# Resume Tailor Project
+
+This repo tailors a LaTeX CV from structured YAML based on job descriptions.
+
+## Layout
+
+| Path | Purpose |
+|------|---------|
+| `master/resume.yaml` | Canonical CV — edit only via manual changes or `/update-resume` |
+| `output/{slug}/resume.yaml` | Tailored variant per job application |
+| `output/{slug}/jd-analysis.md` | Full audit report (git tracked) |
+| `output/{slug}/Sk_Sahil_Parvez_CV.pdf` | Generated PDF (gitignored) |
+| `docs/tailoring-playbook.md` | ATS rules and rewrite guidelines |
+| `scripts/render.py` | YAML → LaTeX |
+| `scripts/build.sh` | Docker latexmk PDF build |
+
+## Natural Language Routing
+
+When the user pastes a job description or asks to tailor/customize/update their CV/resume for a specific role:
+
+1. Follow the **tailor-resume** skill (`.agents/skills/tailor-resume/SKILL.md`)
+2. Do NOT edit `master/resume.yaml` during tailoring
+
+When the user asks to add experience, bullets, or projects to their master CV:
+
+1. Follow the **update-resume** skill (`.agents/skills/update-resume/SKILL.md`)
+
+## Non-Negotiable Rules
+
+- Education and certifications are **fully static** — never tailored
+- Missing JD skills are **reported only** — never added to CV
+- Aggressive rewrites must preserve truthful facts and metrics
+- Soft 1-page limit: warn in audit, do not auto-trim
+- Build PDFs with: `make build-variant SLUG={slug}` or `make build-master`
+
+## Build Commands
+
+```bash
+make install-deps      # Python: PyYAML, Jinja2
+make docker-build      # One-time Docker LaTeX image
+make build-master      # Preview canonical CV PDF
+make build-variant SLUG=my-company-role-2026-08-24
+make validate          # Validate master YAML schema
+```

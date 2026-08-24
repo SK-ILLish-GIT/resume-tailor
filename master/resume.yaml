@@ -1,0 +1,176 @@
+# Canonical resume source — edited via manual edits or /update-resume only.
+# Tailoring copies this file to output/{slug}/resume.yaml before changes.
+
+header:
+  name: SK SAHIL PARVEZ
+  phone: "9874435806"
+  email: sksahilparvez2000@gmail.com
+  linkedin:
+    url: https://www.linkedin.com/in/sk-sahil-parvez-iiita/
+    label: linkedin.com/in/sk-sahil-parvez-iiita
+  portfolio:
+    url: https://sksahil-portfolio.onrender.com/
+    label: sksahil-portfolio.onrender.com
+
+summary: >
+  Software Engineer with experience building analytics platforms, observability systems,
+  and distributed backend services using React.js, GraphQL, Node.js, Express.js, and OpenTelemetry.
+  Skilled in CI/CD automation, telemetry pipelines, and scalable microservices architecture.
+
+education:
+  - institution: Indian Institute of Information Technology, Allahabad
+    degree: Bachelor of Technology in Information Technology
+    dates: 07/2021 -- 06/2025
+    details: "Marks: 8.53/10"
+
+experience:
+  - company: Highspot
+    title: Software Development Engineer
+    dates: 08/2025 -- Present
+    location: Hyderabad
+    tech_stack: React.js, GraphQL, Node.js, Express.js, MongoDB, SQL, AI Orchestration
+    certificate_url: null
+    bullets:
+      - text: >-
+          Built an interactive feature flag network tool with graph-based visualization and
+          AI-powered chat support, enabling developers to discover, visualize, and toggle flag
+          dependencies across platforms.
+        tags: [react, graphql, ai, feature-flags, visualization, node]
+        priority: 2
+      - text: >-
+          Delivered role play scorecard, integrating GraphQL to get data from SQL and developing
+          15 data views.
+        tags: [graphql, sql, react, data-visualization]
+        priority: 3
+      - text: >-
+          Implemented blueprint based visualizations using React.js to generate charts, covering
+          90% existing bar charts.
+        tags: [react, visualization, charts]
+        priority: 4
+      - text: >-
+          Built CodePilot, an AI workflow orchestrator with 15+ reusable SDLC skills, 3 specialized
+          personas, and governance guardrails, improving consistency and adoption of AI-assisted
+          engineering across 5 teams and 50+ engineers.
+        tags: [ai, orchestration, leadership, sdlc, governance]
+        priority: 1
+
+  - company: Zscaler, Inc
+    title: Software Development Engineer Intern
+    dates: 02/2025 -- 08/2025
+    location: Bangalore
+    tech_stack: Python, Golang, RabbitMQ, Bash/Shell Scripting, OpenTelemetry, CI/CD, AWS
+    certificate_url: https://www.credly.com/badges/6d8db15a-4bec-4729-855e-6faf7650847c
+    bullets:
+      - text: >-
+          Built OtelForge, a platform to deploy and manage OpenTelemetry Collectors across 20+
+          AWS EC2 instances.
+        tags: [opentelemetry, aws, observability, platform, python]
+        priority: 1
+      - text: >-
+          Implemented 9 predefined scripts executed by async Go workers via RabbitMQ and SSH for
+          secure, concurrent execution.
+        tags: [golang, rabbitmq, distributed-systems, automation]
+        priority: 2
+      - text: >-
+          Instrumented a sampling mechanism using OpenTelemetry (v0.128.0) to efficiently collect
+          data and PII masking to redact sensitive data in system logs and traces.
+        tags: [opentelemetry, observability, security, python]
+        priority: 3
+      - text: >-
+          Architected a complete pytest automation framework integrated with gitlab CI/CD,
+          covering 50+ test cases.
+        tags: [pytest, ci-cd, testing, python, automation]
+        priority: 4
+
+  - company: Fractal.ai
+    title: Software Development Engineer Intern
+    dates: 05/2024 -- 07/2024
+    location: Remote
+    tech_stack: Next.js, JavaScript, Node.js, MySQL
+    certificate_url: https://drive.google.com/file/d/1ZvOXi7rF7RsdwN81TFdBPw-0deks7ZIX/view
+    bullets:
+      - text: >-
+          Architected automated test scripts using Codecept.js and Mocha.js to ensure a 100%
+          bug-free user experience.
+        tags: [testing, javascript, automation, qa]
+        priority: 1
+      - text: >-
+          Contributed to 2 projects utilizing Next.js, Node.js and MySQL, enhancing front-end
+          interfaces.
+        tags: [nextjs, nodejs, mysql, frontend]
+        priority: 2
+
+projects:
+  - name: GameVault (Distributed Gaming Platform)
+    github_url: https://github.com/SK-ILLish-GIT/games_sk
+    github_label: github.com/SK-ILLish-GIT/games_sk
+    website_url: null
+    dates: 01/2026 -- 04/2026
+    tech_stack: TypeScript, React.js, Express.js, PostgreSQL, MongoDB, Redis, Observability
+    include: true
+    bullets:
+      - text: >-
+          Built a containerized gaming platform with 10-service docker compose core stack and
+          8-container observability overlay.
+        tags: [docker, microservices, observability, distributed-systems]
+        priority: 1
+      - text: >-
+          Exposed the system through a React.js SPA and Nginx API gateway routing requests to 5
+          independent Express.js backend services for auth, leaderboards, and 3 games.
+        tags: [react, nginx, express, api-gateway, microservices]
+        priority: 2
+      - text: >-
+          Integrated 3 data stores, PostgreSQL for users/auth and leaderboard, Redis for token
+          rotation and leaderboard caching, and MongoDB for game-specific session and state data.
+        tags: [postgresql, redis, mongodb, databases]
+        priority: 3
+      - text: >-
+          Instrumented all backend services with OpenTelemetry, Prometheus, Loki, and 6 Grafana
+          dashboards.
+        tags: [opentelemetry, prometheus, grafana, observability]
+        priority: 4
+
+  - name: PriceTracker
+    github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
+    github_label: github.com/SK-ILLish-GIT/PriceTrackEr
+    website_url: https://price-tracker-ebon.vercel.app/
+    dates: 11/2024 -- 01/2025
+    tech_stack: Next.js, Tailwind CSS, Node.js, MongoDB, Cron Jobs
+    include: true
+    bullets:
+      - text: Developed a price tracking website with automated price drop alert functionality.
+        tags: [nextjs, nodejs, mongodb, automation]
+        priority: 1
+      - text: >-
+          Integrated cron jobs for scheduled (7am daily) data scraping from amazon, providing
+          users with morning alert.
+        tags: [cron, scraping, nodejs, automation]
+        priority: 2
+      - text: >-
+          Implemented AI-generated product descriptions, keeping each under 200 words, enhancing
+          clarity and consistency.
+        tags: [ai, nextjs, content-generation]
+        priority: 3
+
+skills:
+  - category: Frontend & Backend
+    keywords: React.js, Next.js, Node.js, Express.js, REST APIs
+  - category: Cloud & Databases
+    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, MySQL, Redis
+  - category: DevOps
+    keywords: Docker, RabbitMQ, CI/CD, OpenTelemetry, Prometheus, Grafana, Loki
+  - category: Languages
+    keywords: C++, Python, JavaScript, TypeScript, Golang, Bash
+  - category: Concepts
+    keywords: Data Structures, OOP, Operating Systems, DBMS, Distributed Systems, MCP
+
+certifications:
+  - latex: >-
+      Achieved ratings of \textbf{1876} on \textbf{\href{https://www.codechef.com/users/pir0_coder}{CodeChef}}
+      (4 Star), \textbf{1501} on \textbf{\href{https://codeforces.com/profile/foolcoder}{Codeforces}}
+      (Specialist), and \textbf{1973} on \textbf{\href{https://leetcode.com/u/Fibonacci_lc/}{LeetCode}} (Knight).
+  - latex: Solved \textbf{1600+} DSA and competitive programming problems across platforms.
+  - latex: >-
+      Pursuing PG Certification Program in \textbf{Forward Deployed Engineering (FDE)} from \textbf{IIT Roorkee}.
+  - latex: >-
+      Mastered agile framework and risk analysis from \href{https://drive.google.com/file/d/1y-vA2-KL91K49sSYUVopEc4qqcYQziZ3/view?usp=sharing}{\textbf{Google's Foundations of Project Management}}.

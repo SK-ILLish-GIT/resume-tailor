@@ -1,0 +1,47 @@
+{% raw %}
+\newcommand{\experienceItemListStart}{\begin{itemize}}
+\newcommand{\experienceItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\experienceDeatils}[5]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} \textbar\hspace{0.2em} \text{#2} & \text{#3} \\
+        \textbf{Tech Stack:} \text{#4} & \text{#5}\\
+    \end{tabular*}
+}
+\newcommand{\experienceDeatilsWithCert}[6]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} \textbar\hspace{0.2em} \href{#6}{#2} & \text{#3} \\
+        \textbf{Tech Stack:} \text{#4} & \text{#5}\\
+    \end{tabular*}
+}
+{% endraw %}
+
+\section{\normalsize \textbf{WORK EXPERIENCE}}
+    \resumeSubHeadingListStart
+{% for job in experience %}
+{% if job.certificate_url %}
+        \experienceDeatilsWithCert
+        { {{- job.company | latex_escape -}} }
+        { {{- job.title | latex_escape -}} }
+        { {{- job.dates | latex_escape -}} }
+        { {{- job.tech_stack | latex_escape -}} }
+        { {{- job.location | latex_escape -}} }
+        { {{- job.certificate_url | latex_escape -}} }
+{% else %}
+        \experienceDeatils
+        { {{- job.company | latex_escape -}} }
+        { {{- job.title | latex_escape -}} }
+        { {{- job.dates | latex_escape -}} }
+        { {{- job.tech_stack | latex_escape -}} }
+        { {{- job.location | latex_escape -}} }
+{% endif %}
+        \vspace{-5pt}
+         \experienceItemListStart
+{% for bullet in job.bullets %}
+            \ProjectItem{ {{- bullet.text | latex_escape -}} }
+{% endfor %}
+        \experienceItemListEnd
+       \vspace{5pt}
+{% endfor %}
+    \resumeSubHeadingListEnd
