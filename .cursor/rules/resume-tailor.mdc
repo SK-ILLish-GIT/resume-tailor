@@ -20,7 +20,7 @@ This repo tailors a LaTeX CV from structured YAML based on job descriptions.
 | `master/resume.yaml` | Canonical CV — edit only via manual changes or `/update-resume` |
 | `output/{slug}/resume.yaml` | Tailored variant per job application |
 | `output/{slug}/jd-analysis.md` | Full audit report (git tracked) |
-| `output/{slug}/Sk_Sahil_Parvez_CV.pdf` | Generated PDF (gitignored) |
+| `output/{slug}/{Company}_{Role}_{Date}.pdf` | Generated PDF (gitignored) |
 | `docs/tailoring-playbook.md` | ATS rules and rewrite guidelines |
 | `scripts/render.py` | YAML → LaTeX |
 | `scripts/build.sh` | Docker latexmk PDF build |

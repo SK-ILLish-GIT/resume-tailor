@@ -1,0 +1,26 @@
+Job Summary
+About the team:
+The Rubrik Cloud Native Protection team helps customers secure their data on the cloud. Cloud data is growing at an ever growing pace and so are the risks with cyber attacks targeted towards cloud data. We make it easy for businesses to protect, search, analyze all of their cloud data simply and scalably.
+
+Cloud Native Protection is one of the fastest growing businesses and teams within Rubrik. We consider ourselves a startup inside a startup! Join us in this journey where there are ever widening avenues to explore, opportunities to innovate, deep engineering problems to tackle. We believe in fostering a culture with strong engineering values and teamwork as the key to building a great company and product.
+
+About Role:
+
+Rubrik Software Engineers are self-starters, driven, and can manage themselves. We believe in giving engineers responsibility, not tasks. Our goal is to motivate and challenge people to do their best work. Bottom line, if you have a limitless drive and like to win, we want to talk to you - come make history!
+
+What you'll do:
+
+Build our cloud native protection software using your strong background in distributed systems and cloud.
+Design, develop, test, deploy, maintain and improve the software.
+Manage individual projects priorities, deadlines and deliverables with your technical expertise.
+
+Experience you'll need:
+
+Bachelor's or Master's degree or equivalent in computer science or related field
+2+ years of relevant work experience,
+Proficiency in one or more general purpose programming languages like Go, Java, C/C++, Scala, Python
+Experience with AWS/Azure/GCP or other public cloud technologies is a plus.
+Knowledge of Docker, Containers, Kubernetes, microservice architectures is a plus.
+Excellent problem-solving skills and attention to detail.
+Strong understanding of System Development Life Cycle (SDLC) methodology, design patterns, and software engineering principles
+Strong collaboration and communication skills. Ability to work independently or as part of a team on complex, time-sensitive projects.

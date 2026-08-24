@@ -11,9 +11,9 @@ else
 endif
 
 BUILD_DIR := $(OUT)/build
-PDF       := $(OUT)/Sk_Sahil_Parvez_CV.pdf
+PDF       := $(shell $(PYTHON) $(ROOT)scripts/resolve_pdf.py $(SLUG))
 
-.PHONY: docker-build render build build-master build-variant validate install-deps
+.PHONY: docker-build render build build-master build-variant upload-variant validate install-deps
 
 docker-build:
 	docker build -t resume-tailor-tex $(ROOT)
@@ -31,6 +31,10 @@ build-master:
 build-variant:
 	@test -f $(YAML) || (echo "Missing $(YAML). Run tailor-resume first." && exit 1)
 	$(MAKE) build SLUG=$(SLUG)
+
+upload-variant:
+	@test -f $(PDF) || (echo "Missing $(PDF). Run build-variant first." && exit 1)
+	$(PYTHON) $(ROOT)scripts/upload_to_mongo.py --slug $(SLUG) $(UPLOAD_ARGS)
 
 validate:
 	$(PYTHON) $(ROOT)scripts/migrate_tex_to_yaml.py --yaml $(YAML)

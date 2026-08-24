@@ -16,7 +16,7 @@ make docker-build
 3. Agent creates `output/{company-role-date}/` with:
    - `resume.yaml` — tailored variant
    - `jd-analysis.md` — keyword audit, gaps, interview prep
-   - `Sk_Sahil_Parvez_CV.pdf` — ready to submit
+   - `{Company}_{Role}_{Date}.pdf` — ready to submit (e.g. `Rubrik_Software_Engineer_Cloud_Native_Protection_2026-08-25.pdf`)
 
 ## Update Master CV
 
@@ -25,7 +25,7 @@ Use `/update-resume` or edit `master/resume.yaml` directly.
 ## Preview Master PDF
 
 ```bash
-make build-master   # writes to output/master/Sk_Sahil_Parvez_CV.pdf (regenerated, gitignored)
+make build-master   # writes to output/master/Sk_Sahil_Parvez_CV.pdf (master preview, gitignored)
 ```
 
 ## Project Structure

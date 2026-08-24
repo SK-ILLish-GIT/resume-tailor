@@ -81,6 +81,8 @@ Write `output/{slug}/jd-analysis.md` using the template structure:
 - Gap analysis with interview talking points
 - ATS tips for this role
 
+Also save the raw JD text to `output/{slug}/job-description.txt` (needed for optional MongoDB upload).
+
 ### 6. Build PDF
 
 ```bash
@@ -89,12 +91,31 @@ make build-variant SLUG={slug}
 
 If Docker image missing, run `make docker-build` first.
 
-### 7. Report to User
+### 7. Optional — Upload to MongoDB
+
+Only when the user asks to **save to db**, **upload to mongodb**, or similar:
+
+Prerequisites:
+- `.env` at repo root with `MONGODB_URI`, `MONGODB_DB`, `MONGODB_USER_ID` (see `.env.example`)
+- `make install-deps` includes pymongo
+
+```bash
+make upload-variant SLUG={slug}
+```
+
+Writes to ColdMail collections:
+- `resume_variants` — yaml, jdAnalysis, jobDescription, coverage, slug
+- `resumes` — PDF binary as `{Company}_{Role}_{Date}.pdf` with tags + `tailoredFor` metadata
+
+Does **not** sync `master/resume.yaml` to `resume_master`.
+
+### 8. Report to User
 
 Return:
 
-- PDF path: `output/{slug}/Sk_Sahil_Parvez_CV.pdf`
+- PDF path: `output/{slug}/{Company}_{Role}_{Date}.pdf` (parsed from jd-analysis header)
 - Audit path: `output/{slug}/jd-analysis.md`
+- MongoDB upload status (if requested)
 - 3–5 bullet summary of key changes
 - Overflow warning if applicable
 - Top gaps and suggested interview talking points
