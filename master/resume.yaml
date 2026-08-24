@@ -32,9 +32,9 @@ experience:
     certificate_url: null
     bullets:
       - text: >-
-          Built an interactive feature flag network tool with graph-based visualization and
-          AI-powered chat support, enabling developers to discover, visualize, and toggle flag
-          dependencies across platforms.
+          Built an interactive feature flag network tool mapping 2000+ feature flags with
+          graph-based visualization and AI-powered chat support, enabling developers to discover,
+          visualize, and toggle flag dependencies across platforms.
         tags: [react, graphql, ai, feature-flags, visualization, node]
         priority: 2
       - text: >-
@@ -140,14 +140,14 @@ projects:
     bullets:
       - text: >-
           Built OtelForge, a cloud-agnostic platform to deploy and manage OpenTelemetry Collector
-          configurations across SSH-reachable Linux nodes with batch events and live job output
-          in a React UI.
+          configurations across 50+ SSH-reachable Linux nodes with batch events and live job
+          output in a React UI.
         tags: [opentelemetry, observability, platform, golang, react, cloud]
         priority: 1
       - text: >-
-          Architected Go (Fiber) REST API and RabbitMQ async workers — one message per node,
-          SSH/SCP remote execution with predefined scripts, pre/post verification, and DLQ
-          retries after 3 failed attempts.
+          Architected Go (Fiber) REST API and RabbitMQ async workers — 1 message per node, 6
+          predefined deployment tasks, SSH/SCP execution with pre/post verification, and
+          3-attempt DLQ retries with per-node rollback.
         tags: [golang, rabbitmq, distributed-systems, ssh, automation]
         priority: 2
       - text: >-
@@ -209,15 +209,15 @@ projects:
 
 skills:
   - category: Frontend & Backend
-    keywords: React.js, Next.js, Node.js, Express.js, REST APIs
+    keywords: React.js, Next.js, Node.js, Express.js, GraphQL, REST APIs
   - category: Cloud & Databases
-    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, MySQL, Redis
+    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, MySQL, Redis, SQL, NoSQL
   - category: DevOps
     keywords: Docker, RabbitMQ, CI/CD, OpenTelemetry, Prometheus, Grafana, Loki
   - category: Languages
     keywords: C++, Python, JavaScript, TypeScript, Golang, Bash
   - category: Concepts
-    keywords: Data Structures, OOP, Operating Systems, DBMS, Distributed Systems, MCP
+    keywords: Data Structures, OOP, Operating Systems, DBMS, Distributed Systems, MCP, AI Orchestration
 
 certifications:
   - latex: >-

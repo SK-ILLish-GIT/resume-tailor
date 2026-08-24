@@ -151,6 +151,7 @@ projects:
 
     highlights:
       - Batch deploy OTel Collector configs to N nodes via one event (SSH + SCP, no agent required)
+      - Designed to manage configs across 50+ SSH-reachable Linux nodes at target production scale
       - Async job processing — API enqueues one RabbitMQ message per node; workers execute remotely
       - Live job output in UI with 1.5s polling; per-node pass/fail, stdout/stderr, rollback
       - Pre-run YAML validation and post-run verification checks on every deploy

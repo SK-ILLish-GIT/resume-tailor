@@ -61,10 +61,9 @@ Rewrote to lead with **cloud-native distributed systems**, **Python**, **Golang*
 - **Space:** Dropped Fractal.ai experience entirely; trimmed Zscaler to 3 bullets and GameVault from 4→3
 
 ### Skills
-- Reordered: **Languages** (Golang, Python, C++ lead)
-- **DevOps & Observability** — Docker, OTel, Prometheus, Grafana, Loki, Tempo, RabbitMQ (aligned to GameVault + OtelForge)
-- **Backend & Microservices** — Node.js, Express, Nginx, microservices (GameVault stack)
-- **Cloud & Databases** — AWS, PostgreSQL, MongoDB, Redis
+- ATS-optimized into 6 standard categories (Programming Languages → Core CS)
+- Lead with JD terms: **Go**, Python, C++, AWS, Docker, OpenTelemetry, CI/CD, Distributed Systems
+- Split databases into dedicated row with SQL/NoSQL; observability row separate from cloud infra
 
 ## Page Length
 

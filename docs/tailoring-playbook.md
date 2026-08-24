@@ -46,6 +46,27 @@ Each bullet should follow:
 - Reframe the same work from the JD's perspective (e.g. "platform" JD → emphasize deployment/scaling language)
 - Swap synonyms to match JD terms (e.g. "microservices" ↔ "distributed services" per JD wording)
 - Keep all numbers and facts intact — rewrite framing, not substance
+- **Prefer quantified bullets** when selecting/reordering — bullets with metrics beat vague ones at equal JD match
+
+## Quantification Rules
+
+Every bullet should include a **number, scale, or scope** when one exists in master or project catalog:
+
+| Good (quantified) | Weak (vague) |
+|---|---|
+| 20+ AWS EC2 instances | large-scale cloud deployment |
+| 5 teams and 50+ engineers | many teams adopted it |
+| 10-service Docker Compose stack | containerized platform |
+| 50+ test cases | comprehensive test suite |
+| 6 Grafana dashboards | full observability |
+
+**Where to find numbers:** master bullets, `docs/projects-catalog.yaml` highlights (service counts, retry limits, node scale), repo READMEs.
+
+**Never fabricate** percentages, latency improvements, or user counts you cannot verify.
+
+**Priority when trimming:** drop unquantified bullets before quantified ones at similar JD relevance.
+
+**Summary:** include at least one scale metric in sentence 2 (e.g. 20+ instances, 10 services, 50+ engineers).
 
 **Example rewrite:**
 
@@ -74,12 +95,16 @@ Score each bullet by tag overlap with JD keywords. Select by score × (1/priorit
 - Third sentence (optional): supporting tech stack match
 - Aggressively mirror JD language while staying truthful
 
-## Skills Reordering
+## Skills Reordering (ATS)
 
-- Move the most JD-relevant category to the top
-- Within each category, reorder keywords to lead with JD matches
-- Do not add skills not in master; do not remove skills unless space requires and skill is irrelevant
-- Mirror JD terminology in keyword strings
+- Use **standard ATS category labels**: `Programming Languages`, `Cloud & Infrastructure`, `Observability`, `Databases`, `Backend & APIs`, `Core CS` (avoid creative names)
+- Lead each row with **exact JD spellings** first (e.g. JD says "Go" → list `Go, Golang` not only Golang)
+- Split into **6 compact rows** — ATS parsers scan comma-separated keywords, not paragraphs
+- Group all databases in one row with `SQL, NoSQL` alongside named stores (PostgreSQL, MongoDB, etc.)
+- Pull keywords only from `master/resume.yaml` skills — reorder and alias for JD terms, never invent
+- Repeat top JD keywords across summary + skills + bullets naturally; do not keyword-stuff
+- Mirror JD terminology: `CI/CD`, `OpenTelemetry`, `Node.js`, `REST APIs`, `Distributed Systems`
+- Drop low-match keywords (e.g. Next.js, MCP) when space or relevance requires
 
 ## Project Selection
 

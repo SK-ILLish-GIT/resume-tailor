@@ -12,10 +12,9 @@ header:
     label: sksahil-portfolio.onrender.com
 
 summary: >
-  Software Engineer with experience building cloud-native distributed systems and observability
-  platforms using Golang, Python, Docker, AWS, and OpenTelemetry across microservices and
-  telemetry pipelines. Skilled in designing, deploying, and maintaining production software
-  with CI/CD automation and full MELT observability stacks.
+  Software Engineer with experience building cloud-native distributed systems — including a
+  10-service microservices platform and OTel deployment across 20+ AWS EC2 instances — using
+  Golang, Python, Docker, and OpenTelemetry with CI/CD automation and full MELT observability.
 
 education:
   - institution: Indian Institute of Information Technology, Allahabad
@@ -44,9 +43,9 @@ experience:
         tags: [graphql, sql, distributed-systems, platform]
         priority: 2
       - text: >-
-          Built an interactive feature flag network tool with graph-based visualization and
-          AI-powered chat support, enabling developers to discover and toggle flag dependencies
-          across distributed platforms.
+          Built an interactive feature flag network tool mapping 2000+ feature flags with
+          graph-based visualization and AI-powered chat support, enabling developers to discover
+          and toggle flag dependencies across distributed platforms.
         tags: [platform, distributed-systems, ai, feature-flags]
         priority: 3
 
@@ -110,12 +109,13 @@ projects:
     bullets:
       - text: >-
           Built OtelForge, a cloud-agnostic platform to deploy and manage OpenTelemetry Collector
-          configurations across SSH-reachable Linux nodes with batch events and live job output.
+          configurations across 50+ SSH-reachable Linux nodes with batch events and live job output.
         tags: [opentelemetry, observability, platform, golang, cloud]
         priority: 1
       - text: >-
-          Architected Go (Fiber) REST API and RabbitMQ async workers — one message per node,
-          SSH/SCP execution with pre/post verification, DLQ retries, and per-node rollback.
+          Architected Go (Fiber) REST API and RabbitMQ async workers — 1 message per node, 6
+          predefined deployment tasks, SSH/SCP execution with pre/post verification, and
+          3-attempt DLQ retries with per-node rollback.
         tags: [golang, rabbitmq, distributed-systems, ssh, automation]
         priority: 2
       - text: >-
@@ -161,16 +161,18 @@ projects:
         priority: 2
 
 skills:
-  - category: Languages
-    keywords: Golang, Python, C++, TypeScript, JavaScript, Bash
-  - category: Cloud & Databases
-    keywords: AWS (EC2, S3), PostgreSQL, MongoDB, Redis, SQL, NoSQL
-  - category: DevOps & Observability
-    keywords: Docker, OpenTelemetry, Prometheus, Grafana, Loki, Tempo, RabbitMQ, CI/CD
-  - category: Backend & Microservices
-    keywords: Node.js, Express.js, Nginx, REST APIs, Microservices, Distributed Systems
-  - category: Concepts
-    keywords: Data Structures, OOP, Operating Systems, DBMS, MCP
+  - category: Programming Languages
+    keywords: Go, Golang, Python, C++, JavaScript, TypeScript, Bash
+  - category: Cloud & Infrastructure
+    keywords: AWS (EC2, S3), Docker, CI/CD, RabbitMQ
+  - category: Observability
+    keywords: OpenTelemetry, Prometheus, Grafana, Loki
+  - category: Databases
+    keywords: PostgreSQL, MongoDB, MySQL, Redis, SQL, NoSQL
+  - category: Backend & APIs
+    keywords: Node.js, Express.js, REST APIs, GraphQL, React.js
+  - category: Core CS
+    keywords: Data Structures, OOP, Distributed Systems, Operating Systems, DBMS
 
 certifications:
   - latex: >-
