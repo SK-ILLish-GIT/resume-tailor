@@ -1,11 +1,11 @@
 ---
 name: tailor-resume
-description: Tailor resume for a job description — parse JD, create per-job YAML variant, write full audit, build PDF via Docker. Use when user pastes a JD, says tailor resume, or invokes /tailor-resume.
+description: Tailor resume for a job description — parse JD, create per-job YAML variant, email template, PDF, and upload to coldMail MongoDB. Fully automatic, no approval gate. Use when user pastes a JD, says tailor resume, or invokes /tailor-resume.
 ---
 
 # Tailor Resume for Job Description
 
-Automatically tailor `master/resume.yaml` for a pasted job description and produce a PDF.
+Automatically tailor `master/resume.yaml` for a pasted job description and produce **resume YAML + email template + PDF + MongoDB upload** — all in one run.
 
 ## When to Use
 
@@ -18,10 +18,17 @@ Automatically tailor `master/resume.yaml` for a pasted job description and produ
 - Docker running locally
 - Python deps installed: `make install-deps`
 - Docker image built once: `make docker-build`
+- `.env` at repo root with `MONGODB_URI`, `MONGODB_DB`, `MONGODB_USER_ID` (see `.env.example`)
 
 ## Workflow (Fully Automatic — No Approval Gate)
 
-Execute all steps without pausing for user approval.
+Execute **all steps** without pausing for user approval. Never ask "should I upload?" — always upload.
+
+**Deliverables every run:**
+1. `output/{slug}/resume.yaml`
+2. `output/{slug}/email-overrides.yaml` + `email-template.yaml`
+3. `output/{slug}/Sk_Sahil_Parvez_CV.pdf`
+4. MongoDB upload (variant + resume PDF + email template)
 
 ### 1. Load Context
 
@@ -30,7 +37,9 @@ Read these files completely:
 - `master/resume.yaml` — canonical source (do NOT edit)
 - `docs/projects-catalog.yaml` — GitHub-sourced project metadata for picking the best 2 projects
 - `docs/tailoring-playbook.md` — tailoring rules
+- `docs/email-template-playbook.md` — coldMail email template rules
 - `docs/jd-analysis-template.md` — audit report structure
+- `master/email-template.yaml` — email format skeleton (do NOT edit during tailoring)
 
 ### 2. Parse the Job Description
 
@@ -82,41 +91,55 @@ Write `output/{slug}/jd-analysis.md` using the template structure:
 - Gap analysis with interview talking points
 - ATS tips for this role
 
-Also save the raw JD text to `output/{slug}/job-description.txt` (needed for optional MongoDB upload).
+Also save the raw JD text to `output/{slug}/job-description.txt` (required for MongoDB upload).
 
-### 6. Build PDF
+If the user pasted a job URL in their message, save it to `output/{slug}/job-link.txt`.
 
-```bash
-make build-variant SLUG={slug}
-```
+### 6. Build Email Template
+
+Write `output/{slug}/email-overrides.yaml` with JD-specific copy:
+
+- `why_reaching_out` — **1–2 short sentences** tailored to the role (keep compact; bio stays in About Me)
+- `impact_bullets` — 3–4 bullets using the formula in `docs/email-template-playbook.md`
+- `has_job_link: true/false` — set true only when a job URL was provided
+- `role_suffix` — optional short role label for subject (e.g. `Backend SDE`)
+- `tags` — search tags for coldMail
+
+Rules:
+- **Do NOT change coldMail tokens:** `{{name}}`, `{{company}}`, `{{email}}`, `{{jobLink}}`
+- All factual content from `output/{slug}/resume.yaml` — never fabricate
+- Omit job link section entirely when no URL was provided
+
+### 7. Build PDF, Email, and Upload (always run all three)
 
 If Docker image missing, run `make docker-build` first.
 
-### 7. Optional — Upload to MongoDB
-
-Only when the user asks to **save to db**, **upload to mongodb**, or similar:
-
-Prerequisites:
-- `.env` at repo root with `MONGODB_URI`, `MONGODB_DB`, `MONGODB_USER_ID` (see `.env.example`)
-- `make install-deps` includes pymongo
-
 ```bash
-make upload-variant SLUG={slug}
+make publish-variant SLUG={slug}
 ```
 
+This runs in order:
+1. `build-email-template` → `output/{slug}/email-template.yaml`
+2. `build-variant` → `output/{slug}/Sk_Sahil_Parvez_CV.pdf`
+3. `upload-variant` → coldMail MongoDB (`resume_variants`, `resumes`, `templates`)
+
 Writes to ColdMail collections:
-- `resume_variants` — yaml, jdAnalysis, jobDescription, coverage, slug
+- `resume_variants` — yaml, jdAnalysis, jobDescription, coverage, slug, templateId
 - `resumes` — PDF binary as `Sk_Sahil_Parvez_CV.pdf` with tags + `tailoredFor` metadata
+- `templates` — email subject/body from `email-template.yaml`
 
 Does **not** sync `master/resume.yaml` to `resume_master`.
+
+If MongoDB upload fails (missing `.env`, network, etc.), report the error clearly but still return all local artifact paths.
 
 ### 8. Report to User
 
 Return:
 
 - PDF path: `output/{slug}/Sk_Sahil_Parvez_CV.pdf`
+- Email template path: `output/{slug}/email-template.yaml`
 - Audit path: `output/{slug}/jd-analysis.md`
-- MongoDB upload status (if requested)
+- MongoDB IDs: `resume_variants.id`, `resumes.id`, `templates.id` (from upload output)
 - 3–5 bullet summary of key changes
 - Overflow warning if applicable
 - Top gaps and suggested interview talking points
@@ -128,9 +151,10 @@ Return:
 **Agent actions:**
 1. Creates `output/stripe-backend-sde-2026-08-24/`
 2. Tailors YAML emphasizing Node.js, distributed systems, observability
-3. Writes full jd-analysis.md
-4. Runs `make build-variant SLUG=stripe-backend-sde-2026-08-24`
-5. Returns PDF path and audit highlights
+3. Writes `email-overrides.yaml` + builds email template
+4. Writes full `jd-analysis.md`
+5. Runs `make publish-variant SLUG=stripe-backend-sde-2026-08-24` (PDF + MongoDB upload)
+6. Returns PDF path, email template path, MongoDB IDs, and audit highlights
 
 ## Troubleshooting
 
@@ -138,5 +162,6 @@ Return:
 |-------|-----|
 | Docker not running | Ask user to start Docker Desktop |
 | `make build-variant` fails | Check `output/{slug}/build/main.log` for LaTeX errors |
+| `make upload-variant` fails | Check `.env` has `MONGODB_URI` + `MONGODB_USER_ID`; local artifacts still valid |
 | JD missing company name | Infer from text or use `unknown-company` in slug |
 | YAML validation fails | Run `make validate SLUG={slug}` |

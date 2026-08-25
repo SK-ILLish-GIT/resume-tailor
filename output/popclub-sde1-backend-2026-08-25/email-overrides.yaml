@@ -1,0 +1,29 @@
+# Popclub — SDE-1 Backend email overrides (2026-08-25)
+
+name: Popclub — SDE-1 Backend
+role_suffix: Backend SDE
+has_job_link: false
+
+why_reaching_out: |
+  Interested in the SDE-1 Backend role at <strong>{{company}}</strong> —
+  your backend-heavy fintech stack is a strong fit for my experience.
+
+impact_bullets:
+  - "<strong>Write clean, maintainable backend code in production</strong> — At Highspot, I ship GraphQL-backed APIs and SQL data layers for live SaaS features, with code reviews and performance improvements across a production analytics platform."
+  - "<strong>Build and test scalable services on AWS</strong> — At Zscaler (Bangalore), I built Python and Go services across 20+ EC2 instances with GitLab CI/CD and a pytest suite covering 50+ unit tests."
+  - "<strong>Design REST APIs and databases that perform at scale</strong> — On GameVault, I built 5 Express.js REST services with PostgreSQL, Redis caching, and Docker in a 10-service stack (<a href=\"https://github.com/SK-ILLish-GIT/games_sk\">GitHub</a>)."
+  - "<strong>Ship backend platforms end-to-end</strong> — With OtelForge, I built a Go (Fiber) REST API with RabbitMQ workers and PostgreSQL across 50+ nodes (<a href=\"https://github.com/SK-ILLish-GIT/OtelForge\">GitHub</a>)."
+
+tags:
+  - popclub
+  - backend
+  - sde-1
+  - python
+  - golang
+  - rest-apis
+  - postgresql
+  - aws
+  - bengaluru
+  - fintech
+  - unit-testing
+  - product

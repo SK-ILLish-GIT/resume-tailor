@@ -73,8 +73,25 @@ def collect_tags(yaml_data: dict) -> list[str]:
     return sorted(tags)
 
 
-def utc_now() -> datetime:
-    return datetime.now(timezone.utc)
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def normalize_tags(input_tags: list[str] | None) -> list[str]:
+    """Match coldMail server/src/utils/tags.js rules."""
+    if not input_tags:
+        return []
+    seen: set[str] = set()
+    out: list[str] = []
+    for raw in input_tags:
+        t = re.sub(r"\s+", "-", str(raw or "").strip().lower())[:24]
+        if not t or not re.match(r"^[a-z0-9][a-z0-9+./_-]*$", t) or t in seen:
+            continue
+        seen.add(t)
+        out.append(t)
+        if len(out) >= 25:
+            break
+    return out
 
 
 def main() -> None:
@@ -88,6 +105,7 @@ def main() -> None:
 
     out_dir = ROOT / "output" / args.slug
     yaml_path = out_dir / "resume.yaml"
+    template_path = out_dir / "email-template.yaml"
     analysis_path = out_dir / "jd-analysis.md"
     default_jd_path = out_dir / "job-description.txt"
 
@@ -99,6 +117,11 @@ def main() -> None:
     for path, label in [(yaml_path, "resume.yaml"), (analysis_path, "jd-analysis.md"), (pdf_path, "PDF")]:
         if not path.exists():
             raise SystemExit(f"Missing {label}: {path}")
+
+    template_data = None
+    if template_path.exists():
+        with template_path.open(encoding="utf-8") as f:
+            template_data = yaml.safe_load(f)
 
     uri, db_name, user_id = load_env()
     client = MongoClient(uri, tlsCAFile=certifi.where())
@@ -126,15 +149,20 @@ def main() -> None:
     filename = MASTER_PDF_NAME
     coverage_pct = parse_coverage_pct(analysis_text)
     page_status = parse_page_status(analysis_text)
-    tags = collect_tags(yaml_data)
+    tags = normalize_tags(collect_tags(yaml_data))
     pdf_bytes = pdf_path.read_bytes()
-    now = utc_now()
+    now = utc_now_iso()
     jd_hash = hashlib.sha256(job_description.encode("utf-8")).hexdigest()[:12]
     jd_preview = job_description[:120].replace("\n", " ")
 
     existing_variant = db.resume_variants.find_one({"userId": user_id, "slug": args.slug})
     variant_id = existing_variant["id"] if existing_variant else gen_id()
     resume_id = existing_variant.get("resumeId") if existing_variant else gen_id()
+    template_id = None
+    if template_data:
+        template_id = existing_variant.get("templateId") if existing_variant else gen_id()
+        if existing_variant and not existing_variant.get("templateId"):
+            template_id = gen_id()
 
     variant_doc = {
         "id": variant_id,
@@ -151,6 +179,8 @@ def main() -> None:
         "resumeId": resume_id,
         "updatedAt": now,
     }
+    if template_id:
+        variant_doc["templateId"] = template_id
     if existing_variant:
         db.resume_variants.update_one({"_id": existing_variant["_id"]}, {"$set": variant_doc})
     else:
@@ -174,7 +204,7 @@ def main() -> None:
             "sessionId": variant_id,
             "variantSlug": args.slug,
             "coveragePct": coverage_pct,
-            "savedAt": now.isoformat().replace("+00:00", "Z"),
+            "savedAt": now,
         },
         "createdAt": now,
     }
@@ -190,6 +220,38 @@ def main() -> None:
 
     print(f"Uploaded variant {args.slug} → resume_variants.id={variant_id}")
     print(f"Uploaded PDF {filename} → resumes.id={resume_id} (userId={user_id})")
+
+    if template_data and template_id:
+        template_name = template_data.get("name") or f"{company} — {role_title}"
+        template_doc = {
+            "id": template_id,
+            "userId": user_id,
+            "name": template_name,
+            "subject": template_data.get("subject") or "",
+            "body": template_data.get("body") or "",
+            "tags": normalize_tags(template_data.get("tags") or tags),
+            "updatedAt": now,
+            "tailoredFor": {
+                "jdHash": jd_hash,
+                "jdPreview": jd_preview,
+                "role": role_title,
+                "company": company,
+                "sessionId": variant_id,
+                "savedAt": now,
+                "variantSlug": args.slug,
+                "resumeId": resume_id,
+            },
+        }
+        existing_template = db.templates.find_one({"id": template_id, "userId": user_id})
+        if existing_template:
+            db.templates.update_one(
+                {"_id": existing_template["_id"]},
+                {"$set": {k: v for k, v in template_doc.items() if k != "createdAt"}},
+            )
+        else:
+            template_doc["createdAt"] = now
+            db.templates.insert_one(template_doc)
+        print(f"Uploaded template → templates.id={template_id} (tags={len(template_doc['tags'])})")
 
 
 if __name__ == "__main__":

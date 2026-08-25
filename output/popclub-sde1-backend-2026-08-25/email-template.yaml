@@ -1,0 +1,47 @@
+# Tailored email for Popclub — SDE-1 Backend
+# coldMail tokens preserved: {name} {company} {jobLink}
+
+name: Popclub — SDE-1 Backend
+subject: SK Sahil – IIIT Allahabad | Highspot | 1+ YoE | Interested in {{company}}
+  | Backend SDE
+body: "<div>\n  <p>Hi {{name}},</p>\n\n  <h3>About Me</h3>\n  <p>\n  I'm Sk Sahil\
+  \ Parvez, a Bachelor of Technology in Information Technology from IIIT Allahabad\
+  \ (07/2021 – 06/2025). Currently, I work as Software Development Engineer at Highspot.\n\
+  </p>\n\n  <h3>Why I'm Reaching Out</h3>\n  <p>\n  Interested in the SDE-1 Backend\
+  \ role at <strong>{{company}}</strong> —\nyour backend-heavy fintech stack is a\
+  \ strong fit for my experience.\n</p>\n\n\n\n  <h3>How I Can Impact {{company}}</h3>\n\
+  \  <p>Here is how my background maps to what your team is building — each point\
+  \ is backed by work I've shipped in production or end-to-end in projects:</p>\n\
+  \  <ul>\n  <li><strong>Write clean, maintainable backend code in production</strong>\
+  \ — At Highspot, I ship GraphQL-backed APIs and SQL data layers for live SaaS features,\
+  \ with code reviews and performance improvements across a production analytics platform.</li>\n\
+  \  <li><strong>Build and test scalable services on AWS</strong> — At Zscaler (Bangalore),\
+  \ I built Python and Go services across 20+ EC2 instances with GitLab CI/CD and\
+  \ a pytest suite covering 50+ unit tests.</li>\n  <li><strong>Design REST APIs and\
+  \ databases that perform at scale</strong> — On GameVault, I built 5 Express.js\
+  \ REST services with PostgreSQL, Redis caching, and Docker in a 10-service stack\
+  \ (<a href=\"https://github.com/SK-ILLish-GIT/games_sk\">GitHub</a>).</li>\n  <li><strong>Ship\
+  \ backend platforms end-to-end</strong> — With OtelForge, I built a Go (Fiber) REST\
+  \ API with RabbitMQ workers and PostgreSQL across 50+ nodes (<a href=\"https://github.com/SK-ILLish-GIT/OtelForge\"\
+  >GitHub</a>).</li>\n</ul>\n\n  <p>I've attached my resume for your review. Happy\
+  \ to connect for a brief conversation.</p>\n\n  <p>\n  Best regards,<br>\n  <strong>Sk\
+  \ Sahil Parvez</strong><br>\n  Software Development Engineer, Highspot<br>\n  Phone:\
+  \ +91 9874435806<br>\n  Email: <a href=\"mailto:sksahilparvez2000@gmail.com\">sksahilparvez2000@gmail.com</a><br>\n\
+  \  LinkedIn: <a href=\"https://www.linkedin.com/in/sk-sahil-parvez-iiita/\">LinkedIn</a><br>\n\
+  \  Portfolio: <a href=\"https://sksahil-portfolio.onrender.com/\">sksahil-portfolio.onrender.com</a>\n\
+  </p>\n</div>\n"
+has_job_link: false
+variant_slug: popclub-sde1-backend-2026-08-25
+tags:
+- popclub
+- backend
+- sde-1
+- python
+- golang
+- rest-apis
+- postgresql
+- aws
+- bengaluru
+- fintech
+- unit-testing
+- product

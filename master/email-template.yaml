@@ -1,0 +1,46 @@
+# Email template FORMAT ONLY — no resume facts stored here.
+# Content sourced from master/resume.yaml (or output/{slug}/resume.yaml) at tailor time.
+#
+# coldMail tokens (NEVER replace — substituted at compose in coldMail):
+#   {{name}}  {{company}}  {{email}}  {{jobLink}}
+#
+# Tailor-time placeholders (resolved in output/{slug}/email-template.yaml):
+#   {current_employer} in subject_template
+#   {{ABOUT_ME}}  {{WHY_REACHING_OUT}}  {{IMPACT_INTRO}}  {{IMPACT_BULLETS}}
+#   {{CLOSING}}  {{SIGNATURE}}  {{JOB_LINK_SECTION}}
+
+name: Master — Job Application
+
+subject_template: "SK Sahil – IIIT Allahabad | {current_employer} | 1+ YoE | Interested in {{company}}"
+
+job_link_section: |
+  <p><strong>Link:</strong> <a href="{{jobLink}}">{{jobLink}}</a></p>
+
+impact_intro: |
+  <p>Here is how my background maps to what your team is building — each point is backed by work I've shipped in production or end-to-end in projects:</p>
+
+closing: |
+  <p>I've attached my resume for your review. Happy to connect for a brief conversation.</p>
+
+body: |
+  <div>
+    <p>Hi {{name}},</p>
+
+    <h3>About Me</h3>
+    {{ABOUT_ME}}
+
+    <h3>Why I'm Reaching Out</h3>
+    {{WHY_REACHING_OUT}}
+
+  {{JOB_LINK_SECTION}}
+
+    <h3>How I Can Impact {{company}}</h3>
+    {{IMPACT_INTRO}}
+    {{IMPACT_BULLETS}}
+
+    {{CLOSING}}
+
+    {{SIGNATURE}}
+  </div>
+
+tags: []

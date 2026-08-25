@@ -21,6 +21,10 @@ This repo tailors a LaTeX CV from structured YAML based on job descriptions.
 | `output/{slug}/resume.yaml` | Tailored variant per job application |
 | `output/{slug}/jd-analysis.md` | Full audit report (git tracked) |
 | `output/{slug}/Sk_Sahil_Parvez_CV.pdf` | Generated PDF (gitignored) |
+| `output/{slug}/email-template.yaml` | Tailored coldMail email template |
+| `output/{slug}/email-overrides.yaml` | JD-specific email copy (why + impact bullets) |
+| `master/email-template.yaml` | Email format skeleton — no resume facts |
+| `docs/email-template-playbook.md` | Email template rules |
 | `docs/projects-catalog.yaml` | GitHub-sourced project metadata for JD matching |
 | `docs/tailoring-playbook.md` | ATS rules and rewrite guidelines |
 | `scripts/render.py` | YAML → LaTeX |
@@ -32,6 +36,7 @@ When the user pastes a job description or asks to tailor/customize/update their 
 
 1. Follow the **tailor-resume** skill (`.agents/skills/tailor-resume/SKILL.md`)
 2. Do NOT edit `master/resume.yaml` during tailoring
+3. **Always** build email template + PDF + upload to MongoDB — no approval gate, do not ask first
 
 When the user asks to add experience, bullets, or projects to their master CV:
 
@@ -43,6 +48,7 @@ When the user asks to add experience, bullets, or projects to their master CV:
 - Missing JD skills are **reported only** — never added to CV
 - Aggressive rewrites must preserve truthful facts and metrics
 - Soft 1-page limit: warn in audit, do not auto-trim
+- Every JD tailor run: `make publish-variant SLUG={slug}` (email template + PDF + MongoDB upload)
 - Build PDFs with: `make build-variant SLUG={slug}` or `make build-master`
 
 ## Build Commands
@@ -52,5 +58,8 @@ make install-deps      # Python: PyYAML, Jinja2
 make docker-build      # One-time Docker LaTeX image
 make build-master      # Preview canonical CV PDF
 make build-variant SLUG=my-company-role-2026-08-24
+make build-email-template SLUG=my-company-role-2026-08-24
+make publish-variant SLUG=my-company-role-2026-08-24   # email + PDF + MongoDB (tailor-resume default)
+make upload-variant SLUG=my-company-role-2026-08-24
 make validate          # Validate master YAML schema
 ```

@@ -42,3 +42,13 @@
 ## ATS Tips
 
 <!-- Role-specific suggestions from tailoring-playbook.md -->
+
+## Email Template
+
+**Path:** `output/{slug}/email-template.yaml`
+
+### Impact bullets chosen
+<!-- List 3–4 impact bullets and which resume bullets/projects they map to -->
+
+### Job link
+<!-- included | omitted — and why -->
