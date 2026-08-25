@@ -1,0 +1,237 @@
+# Tailored variant for AiPrise — Software Engineer I (2026-08-25)
+# Source: master/resume.yaml — do not edit master during tailoring
+
+header:
+  name: SK SAHIL PARVEZ
+  phone: "9874435806"
+  email: sksahilparvez2000@gmail.com
+  linkedin:
+    url: https://www.linkedin.com/in/sk-sahil-parvez-iiita/
+    label: linkedin.com/in/sk-sahil-parvez-iiita
+  portfolio:
+    url: https://sksahil-portfolio.onrender.com/
+    label: sksahil-portfolio.onrender.com
+
+summary: >
+  Software Engineer building production backend APIs, microservices, and data pipelines using
+  Python, Go, and Node.js. Shipped scalable REST services across a 10-service Docker Compose
+  stack and a Go platform managing 50+ production nodes with PostgreSQL, MySQL, and MongoDB.
+  Experienced in CI/CD, event-driven workflows, third-party integrations, and observability
+  for reliable, well-tested production systems.
+
+education:
+  - institution: Indian Institute of Information Technology, Allahabad
+    degree: Bachelor of Technology in Information Technology
+    dates: 07/2021 -- 06/2025
+    details: "Marks: 8.53/10"
+
+experience:
+  - company: Highspot
+    title: Software Development Engineer
+    dates: 08/2025 -- Present
+    location: Hyderabad
+    tech_stack: React.js, GraphQL, Node.js, Express.js, MongoDB, SQL, AI Orchestration
+    certificate_url: null
+    bullets:
+      - text: >-
+          Built CodePilot, an AI workflow orchestrator with 15+ reusable SDLC skills and
+          governance guardrails, owning the feature end-to-end across 5 teams and 50+ engineers.
+        tags: [ai, orchestration, leadership, sdlc, governance, node]
+        priority: 1
+      - text: >-
+          Delivered role play scorecard integrating GraphQL with SQL-backed data sources,
+          developing 15 data views for analytics and case-style workflow reporting.
+        tags: [graphql, sql, react, data-visualization, apis, databases]
+        priority: 2
+      - text: >-
+          Built an interactive feature flag network tool mapping 2000+ feature flags with
+          graph-based visualization, integrating GraphQL APIs to discover and manage
+          cross-platform dependencies.
+        tags: [react, graphql, feature-flags, node, integrations]
+        priority: 3
+      - text: >-
+          Implemented blueprint-based visualizations using React.js and TypeScript to generate
+          charts, covering 90% of existing bar charts across customer-facing analytics tools.
+        tags: [react, typescript, visualization, charts, frontend]
+        priority: 4
+
+  - company: Zscaler, Inc
+    title: Software Development Engineer Intern
+    dates: 02/2025 -- 08/2025
+    location: Bangalore
+    tech_stack: Python, Golang, RabbitMQ, Bash/Shell Scripting, OpenTelemetry, CI/CD, AWS
+    certificate_url: https://www.credly.com/badges/6d8db15a-4bec-4729-855e-6faf7650847c
+    bullets:
+      - text: >-
+          Built OtelForge, a production platform deploying and managing OpenTelemetry Collectors
+          across 20+ AWS EC2 instances with monitoring, alerting, and observability built in.
+        tags: [opentelemetry, aws, observability, platform, python, production]
+        priority: 1
+      - text: >-
+          Implemented 9 predefined scripts executed by async Go workers via RabbitMQ for
+          event-driven, concurrent execution across distributed system nodes.
+        tags: [golang, rabbitmq, distributed-systems, event-driven, automation]
+        priority: 2
+      - text: >-
+          Instrumented a data collection pipeline using OpenTelemetry (v0.128.0) with PII
+          masking to redact sensitive data in system logs and traces for compliance-safe
+          telemetry ingestion.
+        tags: [opentelemetry, data-pipeline, security, python, compliance-adjacent]
+        priority: 3
+      - text: >-
+          Architected a complete pytest automation framework integrated with GitLab CI/CD,
+          covering 50+ test cases for clean, maintainable, and well-tested deployment code.
+        tags: [pytest, ci-cd, testing, python, automation]
+        priority: 4
+
+  - company: Fractal.ai
+    title: Software Development Engineer Intern
+    dates: 05/2024 -- 07/2024
+    location: Remote
+    tech_stack: Next.js, JavaScript, Node.js, MySQL
+    certificate_url: https://drive.google.com/file/d/1ZvOXi7rF7RsdwN81TFdBPw-0deks7ZIX/view
+    bullets:
+      - text: >-
+          Contributed to 2 projects utilizing Node.js and MySQL, building database-backed
+          backend APIs and application integrations.
+        tags: [nodejs, mysql, backend, apis, databases]
+        priority: 1
+      - text: >-
+          Architected automated test scripts using Codecept.js and Mocha.js, ensuring a 100%
+          bug-free user experience through comprehensive test coverage.
+        tags: [testing, javascript, automation, qa]
+        priority: 2
+
+projects:
+  - name: GameVault (Distributed Gaming Platform)
+    github_url: https://github.com/SK-ILLish-GIT/games_sk
+    github_label: github.com/SK-ILLish-GIT/games_sk
+    website_url: null
+    dates: 01/2026 -- 04/2026
+    tech_stack: TypeScript, React.js, Express.js, PostgreSQL, MongoDB, Redis, Observability
+    include: true
+    bullets:
+      - text: >-
+          Built a production microservices platform with a 10-service Docker Compose stack,
+          exposing scalable REST APIs through an Nginx gateway to 5 independent Express.js
+          backend services.
+        tags: [docker, microservices, rest-apis, express, node.js, scalable]
+        priority: 1
+      - text: >-
+          Integrated 3 data stores — PostgreSQL for users/auth and leaderboard, Redis for
+          token rotation and caching, and MongoDB for session and state data — supporting
+          SQL and NoSQL persistence patterns.
+        tags: [postgresql, redis, mongodb, databases, sql, nosql]
+        priority: 2
+      - text: >-
+          Developed backend services for auth, leaderboards, and game logic with JWT-based
+          authentication and API gateway routing across distributed system components.
+        tags: [express, api-gateway, jwt, microservices, distributed-systems]
+        priority: 3
+      - text: >-
+          Instrumented all services with OpenTelemetry, Prometheus, Loki, and 6 Grafana
+          dashboards for production monitoring, alerting, and observability.
+        tags: [opentelemetry, prometheus, grafana, observability, monitoring]
+        priority: 4
+
+  - name: OtelForge
+    github_url: https://github.com/SK-ILLish-GIT/OtelForge
+    github_label: github.com/SK-ILLish-GIT/OtelForge
+    website_url: null
+    dates: 02/2025 -- Present
+    tech_stack: OpenTelemetry, Go, Fiber, React, PostgreSQL, RabbitMQ, Docker Compose, SSH
+    include: true
+    bullets:
+      - text: >-
+          Built OtelForge end-to-end — a Go (Fiber) REST API platform integrating with 50+
+          remote nodes via SSH/SCP, with batch events, live job output, and per-event audit
+          trails in a React UI.
+        tags: [golang, rest-api, integrations, platform, react, production]
+        priority: 1
+      - text: >-
+          Architected event-driven async workers via RabbitMQ — 1 message per node, 6
+          predefined deployment tasks, 3-attempt DLQ retries, and per-node rollback for
+          reliable data pipeline execution.
+        tags: [golang, rabbitmq, event-driven, distributed-systems, data-pipeline]
+        priority: 2
+      - text: >-
+          Docker Compose deployment with PostgreSQL, RabbitMQ, API, worker, and web services —
+          supports rollback, rerun-failed jobs, and admin audit across all operator activity.
+        tags: [docker, postgresql, rabbitmq, platform, ci-cd-adjacent]
+        priority: 3
+      - text: >-
+          Implemented JWT auth, AES-256-GCM encrypted credentials, and per-event audit trails
+          for secure third-party node integrations and compliance-ready operator workflows.
+        tags: [security, jwt, audit, integrations, compliance-adjacent]
+        priority: 4
+
+  - name: File Organizer
+    github_url: https://github.com/SK-ILLish-GIT/file-organizer
+    github_label: github.com/SK-ILLish-GIT/file-organizer
+    website_url: null
+    dates: 09/2024 -- 10/2024
+    tech_stack: Bash, Python, Shell Scripting
+    include: false
+    bullets:
+      - text: >-
+          Built a Bash script that sorts files into images, videos, docs, archives, and music
+          folders by extension.
+        tags: [bash, automation, shell-scripting, python]
+        priority: 1
+      - text: >-
+          Added smart subfolders for screenshots and PDFs, with duplicate-name skipping to avoid
+          overwrites.
+        tags: [bash, automation, shell-scripting]
+        priority: 2
+      - text: >-
+          Wrapped the CLI in a Python helper that installs the script, prompts for categories, and
+          prints a move summary.
+        tags: [python, bash, cli, automation]
+        priority: 3
+
+  - name: PriceTracker
+    github_url: https://github.com/SK-ILLish-GIT/PriceTrackEr
+    github_label: github.com/SK-ILLish-GIT/PriceTrackEr
+    website_url: https://price-tracker-ebon.vercel.app/
+    dates: 11/2024 -- 01/2025
+    tech_stack: Next.js, Tailwind CSS, Node.js, MongoDB, Cron Jobs
+    include: false
+    bullets:
+      - text: Developed a price tracking website with automated price drop alert functionality.
+        tags: [nextjs, nodejs, mongodb, automation]
+        priority: 1
+      - text: >-
+          Integrated cron jobs for scheduled (7am daily) data scraping from amazon, providing
+          users with morning alert.
+        tags: [cron, scraping, nodejs, automation]
+        priority: 2
+      - text: >-
+          Implemented AI-generated product descriptions, keeping each under 200 words, enhancing
+          clarity and consistency.
+        tags: [ai, nextjs, content-generation]
+        priority: 3
+
+skills:
+  - category: Programming Languages
+    keywords: Python, Go, Golang, Node.js, JavaScript, TypeScript, Bash
+  - category: Cloud & Infrastructure
+    keywords: Docker, AWS (EC2, S3), RabbitMQ, CI/CD, Git, Distributed Systems
+  - category: Databases
+    keywords: PostgreSQL, MySQL, MongoDB, Redis, SQL, NoSQL
+  - category: Backend & APIs
+    keywords: REST APIs, Microservices, Node.js, Express.js, GraphQL
+  - category: Observability
+    keywords: OpenTelemetry, Prometheus, Grafana, Loki, Monitoring, Alerting
+  - category: Core CS
+    keywords: Data Structures, Algorithms, OOP, Operating Systems, DBMS
+
+certifications:
+  - latex: >-
+      Achieved ratings of \textbf{1876} on \textbf{\href{https://www.codechef.com/users/pir0_coder}{CodeChef}}
+      (4 Star), \textbf{1501} on \textbf{\href{https://codeforces.com/profile/foolcoder}{Codeforces}}
+      (Specialist), and \textbf{1973} on \textbf{\href{https://leetcode.com/u/Fibonacci_lc/}{LeetCode}} (Knight).
+  - latex: Solved \textbf{1600+} DSA and competitive programming problems across platforms.
+  - latex: >-
+      Pursuing PG Certification Program in \textbf{Forward Deployed Engineering (FDE)} from \textbf{IIT Roorkee}.
+  - latex: >-
+      Mastered agile framework and risk analysis from \href{https://drive.google.com/file/d/1y-vA2-KL91K49sSYUVopEc4qqcYQziZ3/view?usp=sharing}{\textbf{Google's Foundations of Project Management}}.

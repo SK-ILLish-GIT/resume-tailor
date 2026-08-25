@@ -1,0 +1,39 @@
+Software Engineer I
+Location: Bangalore, India
+Employment Type: Full time
+Department: Engineering
+Company: LG Ad Solutions
+
+LG Ad Solutions is a global leader in connected TV (CTV) and cross-screen advertising. We pride ourselves on delivering state-of-the-art advertising solutions that integrate seamlessly with today's ever-evolving digital media landscape.
+
+The Opportunity:
+
+We are seeking a Software Engineer I to join our growing engineering team in Bangalore. This is an excellent opportunity for an early-career engineer who wants to work on large-scale, high-performance systems that power LG Ad Solutions' global advertising platform. As part of the team, you will develop, deploy and maintain scalable systems for ad serving, targeting, and measurement. You'll have the opportunity to work across a modern technology stack — from big data and distributed systems to AI-driven measurement models — while learning from experienced engineers and contributing to projects that drive significant business impact. This role offers exposure to a collaborative, fast-paced environment with clear growth pathways and hands-on learning opportunities.
+
+Responsibilities:
+
+● Contribute to the design and development of scalable and performant ad serving and measurement systems.
+● Collaborate with team members to design efficient and innovative big data and distributed system components.
+● Work on integrations with internal and external systems to expand data and targeting capabilities.
+● Participate in code reviews and follow best practices around clean code, testing, and CI/CD workflows.
+● Proactively communicate progress, challenges, and feedback with your team and stakeholders.
+● Learn and adopt new technologies, frameworks, and methodologies to continuously improve your skill set.
+● Support the team's goal of operational excellence by writing reliable, well-tested, and maintainable code.
+
+Requirements:
+
+● Bachelor's or Master's degree or relevant experience in Computer Science, Engineering, or related field.
+● Proficiency in one or more programming languages such as Scala, Python, Go, C++ or JavaScript.
+● Strong understanding of data structures and algorithms along with a strong knowledge of fundamental Computer Science concepts.
+● Familiarity with databases (e.g., MySQL, Redis, HDFS, MongoDB, etc).
+● Eagerness to learn big data frameworks such as Spark or Databricks, and cloud technologies like AWS and Kubernetes.
+● Strong problem-solving skills and curiosity to explore complex systems.
+● Clear communication skills and willingness to ask questions, seek feedback, and learn from peers.
+
+Preferred:
+
+● Internship or project experience in distributed systems, big data or application development.
+● Exposure to ReactJS or other front-end frameworks.
+● Experience with data pipelines or cloud-native applications.
+● Enthusiasm for working in a fast-paced environment and contributing to team success.
+● Basic understanding of version control (Git) and collaborative development workflows.
