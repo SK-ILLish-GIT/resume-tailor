@@ -1,56 +1,49 @@
-Poptech Growth Private Limited
-SDE 1 - Backend
-0 - 2 years
-Bengaluru
-Full-Time
-
 Job Title: Software Development Engineer – I (SDE-1)
-Company: Poptech Growth Pvt Ltd (Popclub)
-Experience: 1–2 years
-Location: Sector 1, HSR Layout
+Company: Poptech Growth Pvt Ltd (Popclub / POP)
+Experience: 0–2 years (1–2 preferred)
+Location: Sector 1, HSR Layout, Bengaluru
 Type: Full-Time
 
-About Pop
+About Pop:
+POP is a new-age fintech company making payments fun and rewarding. With POP UPI, users earn POPcoins on every payment, redeemable across 500+ brands. Founded in Bengaluru in 2023, backed by Razorpay and partnered with YES Bank.
 
-We're POP, a new-age fintech company that's making payments fun, rewarding, and totally worth it! With POP UPI, you can pay anyone, anywhere and earn POPcoins every time you do. Those POPcoins aren't just points, they're real rewards you can use to shop, save, and score deals from over 500+ awesome brands. Founded in Bengaluru in 2023, we're backed by Razorpay and partnered with YES Bank to bring India's most rewarding payment experience. At POP, we believe every payment should give something back so we're on a mission to make spending smarter, shopping more exciting, and rewards a part of everyone's daily life.
+Role Overview:
+Passionate SDE-1 eager to learn, build scalable systems, and work on real-world production problems. Work with senior engineers, product managers, and designers.
 
-Role Overview
-We are looking for a passionate Software Development Engineer – I (SDE-1) who is eager to learn, build scalable systems, and work on real-world production problems. You will work closely with senior engineers, product managers, and designers to deliver high-quality software.
+Key Responsibilities:
+- Write clean, efficient, and maintainable code
+- Implement features based on product requirements
+- Fix bugs and improve application performance
+- Participate in code reviews and team discussions
+- Learn system design, debugging, and best engineering practices
+- Collaborate with cross-functional teams (Product, QA, DevOps)
 
-Key Responsibilities
-Write clean, efficient, and maintainable code
-Implement features based on product requirements
-Fix bugs and improve application performance
-Participate in code reviews and team discussions
-Learn system design, debugging, and best engineering practices
-Collaborate with cross-functional teams (Product, QA, DevOps)
+Technical Requirements:
+- Strong fundamentals in Data Structures & Algorithms
+- Proficiency in at least one programming language (Java / Go / Python)
+- Basic understanding of OOP concepts
+- Familiarity with REST APIs
+- Basic knowledge of databases (SQL or NoSQL)
+- Understanding of Git/version control
 
-Technical Requirements
-Strong fundamentals in Data Structures & Algorithms
-Proficiency in at least one programming language (Java / Go / Python)
-Basic understanding of OOP concepts
-Familiarity with REST APIs
-Basic knowledge of databases (SQL or NoSQL)
-Understanding of Git/version control
+Good to Have:
+- Backend frameworks (Gin, Echo, Django, FastAPI, Spring Boot, etc.)
+- Cloud platforms (AWS or others)
+- Unit testing
+- Internship or project experience in product development
 
-Good to Have
-Exposure to backend frameworks (Gin, Echo, Django, Fast API, Spring Boot, etc.)
-Basic knowledge of cloud platforms (AWS or others)
-Understanding of unit testing
-Internship or project experience in product development
+What We Look For:
+- Strong problem-solving mindset
+- Willingness to learn and take ownership
+- Good communication skills
+- Fast-paced environment
 
-What We Look For
-Strong problem-solving mindset
-Willingness to learn and take ownership
-Good communication skills
-Ability to work in a fast-paced environment
+Experience: 1–2 years; fresh graduates with strong fundamentals welcome.
 
-Experience
-1–2 years of software development experience
-Fresh graduates with strong fundamentals are welcome
+Why Join Us:
+- Real production systems
+- Learn from experienced engineers
+- High ownership and fast growth
+- Collaborative culture
 
-Why Join Us
-Work on real production systems
-Learn from experienced engineers
-High ownership and fast growth
-Collaborative and learning-focused culture
+Similar Openings: SDE-2 (Agentic), DevOps Engineer III

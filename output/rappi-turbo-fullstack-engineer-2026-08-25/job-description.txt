@@ -1,0 +1,50 @@
+Role: Fullstack Engineer (SaaS Platform) — Backend-Heavy
+Company: Rappi Turbo (Quick Commerce / Supply Chain Planning)
+Location: Mumbai, India (Hybrid)
+Region Supported: LATAM Markets
+
+About Rappi:
+Rappi is Latin America's premier on-demand delivery platform. Rappi Turbo is the ultra-fast commerce arm, fulfilling customer orders in ten minutes or less through dark stores and micro-fulfillment centers.
+
+About the role:
+Full Stack Engineer (Backend-Heavy) to build and scale the Supply Chain Planning Platform — purchase order creation, inventory transfers, and replenishment decisions across Rappi Turbo network. Platform processes large-scale operational and demand datasets and runs optimization algorithms impacting product availability, working capital efficiency, and customer experience.
+
+What You'll Do:
+- Design scalable backend systems for PO creation, Transfer Order planning, mid-mile/TMS/DC systems
+- Build APIs and services for enterprise planning workflows
+- Develop algorithm-driven modules processing large data volumes
+- Real-time and batch decision-making pipelines
+- Backend architecture: high availability, performance, fault tolerance
+- Data models and pipelines for high-throughput operational data
+- Caching strategies and distributed computing
+- Build production-grade AI agents automating supply chain and procurement workflows
+- Tool-using agents interacting with APIs, email, databases, planning platforms
+- Multi-step agentic workflows with LLM reasoning
+- RAG and vector databases for agent context
+- Agent memory and context management
+- Human-in-the-loop workflows with guardrails and authorization
+- Cross-functional collaboration with product, operations, data science
+- Testing, CI/CD, observability, code quality
+
+Tech Stack:
+- Languages: Python, Django, Golang, Node.js, Kotlin/Java
+- AI: LLM APIs, LangGraph, CrewAI, RAG, vector stores (pgvector, Pinecone)
+- Architecture: RESTful APIs, Microservices / SOA
+- Databases: PostgreSQL / AWS RDS, MongoDB
+- Caching: Redis
+- Infrastructure: Docker, AWS / GCP
+- Data Processing: large-scale batch and real-time planning datasets
+
+Qualifications:
+- Bachelor's in CS/IT or related
+- 0-2 years backend or full-stack with data-intensive platforms
+- At least one agentic or LLM-powered application (tool-calling, RAG, multi-step reasoning)
+- High-volume data processing systems
+- Strong analytical thinking and ownership
+
+Good To Have:
+- Supply chain, logistics, marketplace, quick commerce
+- Optimization algorithms, forecasting, planning systems
+- LLM evaluation/observability — tracing agent decisions
+- React or dashboard applications
+- Analytics and data visualization

@@ -106,7 +106,7 @@ make upload-variant SLUG={slug}
 
 Writes to ColdMail collections:
 - `resume_variants` — yaml, jdAnalysis, jobDescription, coverage, slug
-- `resumes` — PDF binary as `{Company}_{Role}_{Date}.pdf` with tags + `tailoredFor` metadata
+- `resumes` — PDF binary as `Sk_Sahil_Parvez_CV.pdf` with tags + `tailoredFor` metadata
 
 Does **not** sync `master/resume.yaml` to `resume_master`.
 
@@ -114,7 +114,7 @@ Does **not** sync `master/resume.yaml` to `resume_master`.
 
 Return:
 
-- PDF path: `output/{slug}/{Company}_{Role}_{Date}.pdf` (parsed from jd-analysis header)
+- PDF path: `output/{slug}/Sk_Sahil_Parvez_CV.pdf`
 - Audit path: `output/{slug}/jd-analysis.md`
 - MongoDB upload status (if requested)
 - 3–5 bullet summary of key changes

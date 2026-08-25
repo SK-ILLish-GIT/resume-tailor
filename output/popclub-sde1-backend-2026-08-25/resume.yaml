@@ -1,4 +1,5 @@
-# Tailored for Poptech Growth (Popclub) — SDE-1 Backend — 2026-08-25
+# Tailored variant for Popclub — SDE-1 Backend (2026-08-25)
+# Source: master/resume.yaml — do not edit master during tailoring
 
 header:
   name: SK SAHIL PARVEZ
@@ -12,10 +13,10 @@ header:
     label: sksahil-portfolio.onrender.com
 
 summary: >
-  Backend Software Engineer with 1+ years of experience building scalable production systems
-  using Python, Golang, Node.js, and Express.js with REST APIs, SQL/NoSQL databases, and AWS.
-  Strong fundamentals in Data Structures, OOP, and system design with proven delivery across
-  product features, microservices, and CI/CD-driven engineering workflows.
+  Backend Software Engineer building scalable production systems and REST APIs using Python,
+  Go, and Node.js. Delivered backend services across PostgreSQL, MongoDB, and MySQL with
+  unit-tested, maintainable code on AWS. Strong data structures and algorithms fundamentals
+  with hands-on product development experience in fast-paced engineering teams.
 
 education:
   - institution: Indian Institute of Information Technology, Allahabad
@@ -28,74 +29,76 @@ experience:
     title: Software Development Engineer
     dates: 08/2025 -- Present
     location: Hyderabad
-    tech_stack: Node.js, Express.js, GraphQL, SQL, MongoDB, REST APIs
+    tech_stack: React.js, GraphQL, Node.js, Express.js, MongoDB, SQL, AI Orchestration
     certificate_url: null
     bullets:
       - text: >-
-          Delivered production backend features for role play scorecard by integrating GraphQL
-          services with SQL data sources and building 15 data views for scalable application
-          performance.
-        tags: [graphql, sql, backend, rest-apis]
+          Delivered role play scorecard backend integrating GraphQL with SQL-backed data
+          sources, implementing 15 data views with efficient query patterns for production
+          analytics workflows.
+        tags: [graphql, sql, node, backend, databases, rest-adjacent]
         priority: 1
       - text: >-
-          Built CodePilot, a backend AI workflow orchestrator with 15+ reusable SDLC skills and
-          governance guardrails, improving consistency and adoption of engineering best practices
-          across 5 teams and 50+ engineers.
-        tags: [ai, orchestration, backend, sdlc]
+          Built feature flag network APIs mapping 2000+ flags with GraphQL, enabling developers
+          to discover and manage cross-platform dependencies in a production SaaS platform.
+        tags: [graphql, node, backend, apis, production]
         priority: 2
       - text: >-
-          Implemented maintainable backend data pipelines using GraphQL and SQL to power
-          application features, participating in code reviews and cross-functional delivery with
-          product and engineering teams.
-        tags: [graphql, sql, backend]
+          Shipped CodePilot backend workflows with governance guardrails, collaborating with
+          product and engineering teams across 5 teams and 50+ engineers on clean, maintainable
+          feature delivery.
+        tags: [node, backend, ownership, cross-functional, production]
         priority: 3
       - text: >-
-          Shipped scalable application modules using Node.js and Express.js, writing clean and
-          efficient code aligned with product requirements in a fast-paced production environment.
-        tags: [nodejs, express, backend]
+          Implemented data visualization modules using React.js and Node.js, covering 90% of
+          existing chart types while participating in code reviews and performance improvements.
+        tags: [react, node, performance, code-review, fullstack-adjacent]
         priority: 4
 
   - company: Zscaler, Inc
     title: Software Development Engineer Intern
     dates: 02/2025 -- 08/2025
     location: Bangalore
-    tech_stack: Python, Golang, RabbitMQ, OpenTelemetry, CI/CD, AWS, REST APIs
+    tech_stack: Python, Golang, RabbitMQ, Bash/Shell Scripting, OpenTelemetry, CI/CD, AWS
     certificate_url: https://www.credly.com/badges/6d8db15a-4bec-4729-855e-6faf7650847c
     bullets:
       - text: >-
-          Built OtelForge, a production backend platform to deploy and manage OpenTelemetry
-          Collectors across 20+ AWS EC2 instances for real-world scalable system operations.
-        tags: [python, aws, backend, platform]
+          Built OtelForge, a scalable backend platform deploying services across 20+ AWS EC2
+          instances — writing clean, efficient Python and Go code for production systems.
+        tags: [python, golang, aws, backend, scalable, production]
         priority: 1
       - text: >-
-          Implemented concurrent backend workers in Golang with RabbitMQ and SSH to execute
-          predefined scripts securely, improving application reliability and performance in
-          distributed production systems.
+          Implemented async Go workers via RabbitMQ executing concurrent backend jobs with
+          secure, fault-tolerant processing across distributed nodes.
         tags: [golang, rabbitmq, backend, distributed-systems]
         priority: 2
       - text: >-
-          Architected a pytest unit testing automation framework integrated with GitLab CI/CD,
-          covering 50+ test cases to improve code quality, bug fixes, and maintainable releases.
-        tags: [pytest, ci-cd, unit-testing, python]
+          Developed a data processing module using Python and OpenTelemetry (v0.128.0) with
+          PII masking, improving application reliability for sensitive production log data.
+        tags: [python, backend, security, production]
         priority: 3
+      - text: >-
+          Architected a pytest unit testing framework integrated with GitLab CI/CD and Git
+          version control, covering 50+ test cases for maintainable deployment code.
+        tags: [pytest, unit-testing, ci-cd, git, python]
+        priority: 4
 
   - company: Fractal.ai
     title: Software Development Engineer Intern
     dates: 05/2024 -- 07/2024
     location: Remote
-    tech_stack: Node.js, MySQL, JavaScript, REST APIs
+    tech_stack: Next.js, JavaScript, Node.js, MySQL
     certificate_url: https://drive.google.com/file/d/1ZvOXi7rF7RsdwN81TFdBPw-0deks7ZIX/view
     bullets:
       - text: >-
-          Contributed to 2 product development projects using Node.js, MySQL, and REST APIs,
-          implementing backend features and improving application performance in collaboration
-          with cross-functional teams.
-        tags: [nodejs, mysql, rest-apis, backend]
+          Built Node.js backend services with MySQL for 2 product development projects,
+          implementing REST-style APIs and relational database schemas.
+        tags: [nodejs, mysql, backend, rest-apis, product]
         priority: 1
       - text: >-
-          Developed automated test scripts using Codecept.js and Mocha.js, supporting unit
-          testing practices and bug fixes to ensure maintainable, production-ready code.
-        tags: [testing, automation, backend]
+          Wrote automated unit and end-to-end test scripts using Codecept.js and Mocha.js,
+          fixing bugs and ensuring a 100% bug-free user experience before release.
+        tags: [testing, unit-testing, javascript, qa, debugging]
         priority: 2
 
 projects:
@@ -104,25 +107,72 @@ projects:
     github_label: github.com/SK-ILLish-GIT/games_sk
     website_url: null
     dates: 01/2026 -- 04/2026
-    tech_stack: TypeScript, Express.js, PostgreSQL, MongoDB, Redis, REST APIs
+    tech_stack: TypeScript, React.js, Express.js, PostgreSQL, MongoDB, Redis, Observability
     include: true
     bullets:
       - text: >-
-          Built 5 independent Express.js backend services with an Nginx API gateway routing
-          REST API requests for auth, leaderboards, and game modules in a scalable
-          microservices architecture.
-        tags: [express, rest-apis, backend, microservices]
+          Built scalable backend services with 5 independent Express.js REST APIs behind an
+          Nginx gateway — containerized 10-service Docker Compose stack for production
+          deployment.
+        tags: [express, rest-apis, node.js, docker, scalable, backend]
         priority: 1
       - text: >-
-          Integrated SQL and NoSQL databases — PostgreSQL for users/auth and leaderboard, Redis
-          for caching, and MongoDB for session state — supporting efficient backend data access
-          patterns.
-        tags: [postgresql, mongodb, redis, sql, nosql]
+          Designed relational and NoSQL data models — PostgreSQL for auth and leaderboard,
+          MongoDB for session state, Redis for caching — optimizing query performance at scale.
+        tags: [postgresql, mongodb, redis, sql, nosql, databases]
         priority: 2
       - text: >-
-          Developed a containerized backend platform with a 10-service Docker Compose stack,
-          demonstrating scalable system design and production-style service orchestration.
-        tags: [docker, backend, distributed-systems]
+          Implemented JWT authentication and leaderboard APIs with Redis sorted-set caching,
+          handling concurrent backend requests across microservices.
+        tags: [express, rest-apis, redis, backend, microservices]
+        priority: 3
+
+  - name: OtelForge
+    github_url: https://github.com/SK-ILLish-GIT/OtelForge
+    github_label: github.com/SK-ILLish-GIT/OtelForge
+    website_url: null
+    dates: 02/2025 -- Present
+    tech_stack: OpenTelemetry, Go, Fiber, React, PostgreSQL, RabbitMQ, Docker Compose, SSH
+    include: true
+    bullets:
+      - text: >-
+          Built OtelForge backend — Go (Fiber) REST API with PostgreSQL persistence managing
+          deployment state across 50+ production nodes on AWS infrastructure.
+        tags: [golang, fiber, rest-api, postgresql, aws, backend]
+        priority: 1
+      - text: >-
+          Architected RabbitMQ async worker services processing batch jobs with pre/post
+          verification, 3-attempt retries, and per-node rollback for reliable backend execution.
+        tags: [golang, rabbitmq, backend, distributed-systems]
+        priority: 2
+      - text: >-
+          Docker Compose deployment with PostgreSQL, RabbitMQ, API, and worker services —
+          full product development lifecycle from design through production release.
+        tags: [docker, postgresql, backend, product, production]
+        priority: 3
+
+  - name: File Organizer
+    github_url: https://github.com/SK-ILLish-GIT/file-organizer
+    github_label: github.com/SK-ILLish-GIT/file-organizer
+    website_url: null
+    dates: 09/2024 -- 10/2024
+    tech_stack: Bash, Python, Shell Scripting
+    include: false
+    bullets:
+      - text: >-
+          Built a Bash script that sorts files into images, videos, docs, archives, and music
+          folders by extension.
+        tags: [bash, automation, shell-scripting, python]
+        priority: 1
+      - text: >-
+          Added smart subfolders for screenshots and PDFs, with duplicate-name skipping to avoid
+          overwrites.
+        tags: [bash, automation, shell-scripting]
+        priority: 2
+      - text: >-
+          Wrapped the CLI in a Python helper that installs the script, prompts for categories, and
+          prints a move summary.
+        tags: [python, bash, cli, automation]
         priority: 3
 
   - name: PriceTracker
@@ -148,16 +198,18 @@ projects:
         priority: 3
 
 skills:
-  - category: Languages
-    keywords: Python, Golang, JavaScript, TypeScript, C++, Bash
-  - category: Cloud & Databases
-    keywords: PostgreSQL, MongoDB, MySQL, Redis, SQL, NoSQL, AWS (EC2, S3)
+  - category: Programming Languages
+    keywords: Python, Go, Golang, JavaScript, TypeScript, Node.js, Bash
+  - category: Cloud & Infrastructure
+    keywords: AWS (EC2, S3), Docker, CI/CD, Git, RabbitMQ
+  - category: Databases
+    keywords: PostgreSQL, MongoDB, MySQL, Redis, SQL, NoSQL
   - category: Backend & APIs
-    keywords: Node.js, Express.js, REST APIs, GraphQL, RabbitMQ
-  - category: DevOps & Testing
-    keywords: Docker, CI/CD, GitLab CI/CD, pytest, Unit Testing
-  - category: Concepts
-    keywords: Data Structures, OOP, DBMS, Operating Systems, Distributed Systems, System Design
+    keywords: REST APIs, Node.js, Express.js, GraphQL, Microservices
+  - category: Testing & Quality
+    keywords: pytest, Unit Testing, Codecept.js, Debugging
+  - category: Core CS
+    keywords: Data Structures, Algorithms, OOP, DBMS, Operating Systems
 
 certifications:
   - latex: >-

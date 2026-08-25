@@ -16,7 +16,7 @@ make docker-build
 3. Agent creates `output/{company-role-date}/` with:
    - `resume.yaml` — tailored variant
    - `jd-analysis.md` — keyword audit, gaps, interview prep
-   - `{Company}_{Role}_{Date}.pdf` — ready to submit (e.g. `Rubrik_Software_Engineer_Cloud_Native_Protection_2026-08-25.pdf`)
+   - `Sk_Sahil_Parvez_CV.pdf` — ready to submit (same filename for every variant)
 
 ## Update Master CV
 

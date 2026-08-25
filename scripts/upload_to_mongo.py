@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 
 from pdf_names import (
+    MASTER_PDF_NAME,
     build_pdf_names,
     parse_date_from_slug,
     parse_jd_analysis_header,
@@ -121,7 +122,8 @@ def main() -> None:
     else:
         job_description = f"Tailored for {role_title} at {company} ({args.slug})"
 
-    filename, display_name = build_pdf_names(company, role_title, date)
+    _, display_name = build_pdf_names(company, role_title, date)
+    filename = MASTER_PDF_NAME
     coverage_pct = parse_coverage_pct(analysis_text)
     page_status = parse_page_status(analysis_text)
     tags = collect_tags(yaml_data)

@@ -1,0 +1,46 @@
+Software Engineer — CI/CD Platform Team
+Company: Cisco (Collaboration / Engineering Systems)
+Location: Bangalore, India (Hybrid)
+Category: Product and Engineering
+Job ID: 2020969
+
+Meet the team:
+At Cisco, our intuitive platform enables organizations of all sizes to deliver customer and employee experiences at scale. Our newly formed team is part of Engineering Systems within Cisco Collaboration, and we are hiring engineers to help shape its future. Our mission is to improve the developer experience by building a modern CI/CD and release automation platform for a large-scale enterprise environment. Engineering teams across the organization will use this platform to build, test, publish, and deploy software through a unified, Git-driven workflow—with configuration managed in Git, secrets secured in Vault, and automated deployments to Kubernetes or VM-based environments. This team will play a key role in simplifying delivery workflows, increasing engineering productivity, and enabling reliable, secure, and consistent software releases at scale.
+
+Role: Full Stack Software Engineer on the CI/CD Platform team. Use AI-assisted development tools as a core part of how you deliver software. Collaborate with product, backend, DevOps, and QA engineers to architect, design, and build a full-stack application for pipeline orchestration, release control, deployment visibility, audit logging, and enterprise integrations.
+
+Your Impact:
+- Use AI-assisted development tools (e.g., Cursor, Codex, or equivalent) effectively across the full Agile SDLC.
+- Build a full-stack application for a new CI/CD platform: pipeline state, release workflows, deployment visibility, and operational control surfaces.
+- Contribute to AI-native platform capabilities, including MCP servers and AI agents that detect deployment failures, recommend or automate rollbacks, and guide operators through troubleshooting.
+- Solve complicated architecture problems to build scalable and extendable systems.
+- Develop backend services in Java (Spring Boot) and frontend experiences using React, Angular, or Vue.js.
+- Design relational data models and APIs for pipeline state, releases, changes, and audit metadata (MySQL, PostgreSQL, or equivalent).
+- Write unit tests and end-to-end tests for critical CI/CD flows—from trigger through build, publish, deploy, and verify.
+- Deploy and operate platform services in production using CI/CD, GitOps, Kubernetes, and cloud infrastructure.
+- Optimize platform performance and reliability—profiling services, tuning databases and APIs, and improving scalability under production load.
+- Take complete ownership from conception to production release.
+
+Minimum Qualification:
+- 1-3 years of proven experience writing professional production code and tests for large-scale systems.
+- 1-3 years of experience in full-stack technologies (Java/Spring Boot backend plus React, Angular, or Vue.js).
+- Use AI-assisted development tools effectively across the full Agile SDLC.
+- Efficient database design, query performance, and schema migrations in relational databases (MySQL, PostgreSQL).
+- CI/CD tooling for build, test, artifact publishing, and deployment (GitHub Actions, Jenkins, or equivalent).
+- Deployment and release tooling: Argo CD (GitOps), Ansible (VM-based deployment), Harness (or equivalent).
+- Deploying and operating services on Kubernetes and cloud platforms (AWS, Azure, or GCP).
+- Unit tests and end-to-end tests as standard part of delivery.
+- Ownership throughout entire development process.
+- Strategic and product-oriented approach.
+- Outstanding communication skills.
+
+Preferred Qualification:
+- AI-native DevOps, MCP servers, or AI agent development.
+- Building or contributing to CI/CD platforms, release automation, or internal developer platforms.
+- GitHub Actions and Argo CD together in production GitOps environment.
+- HashiCorp Vault or equivalent secrets management.
+- Helm or Kustomize for Kubernetes deployments.
+- VM-based deployment patterns (Ansible, SSH-based automation).
+- Microservices architecture and event-driven systems (RabbitMQ, Redis).
+- Integrating with ITSM or change-management systems (ServiceNow, Jira Service Management).
+- Regulated or compliance-sensitive release environments.
